@@ -15,6 +15,7 @@ The platform is designed for: premium content owners, premium service providers,
 The platform provides administration of premium services and promotion channels for their monetization, analytics and automated notification of partners.
 
 The platform provides next automated communication channels:
+
 * E-mail notifications,
 * HTTP notifications to partner servers,
 * HTTP REST API for management and analytics,
