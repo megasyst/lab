@@ -2,7 +2,7 @@
 Common information
 ==================
 
-.. figure: http://megasyst.com/images/logo.png
+.. image: http://megasyst.com/images/logo.png
 
 Megasyst is a multi purpose platform for monetization of premium content, services and mobile user traffic.
 
@@ -15,8 +15,7 @@ The platform is designed for: premium content owners, premium service providers,
 The platform provides administration of premium services and promotion channels for their monetization, analytics and automated notification of partners.
 
 The platform provides next automated communication channels:
-
-* E-mail notifications,
-* HTTP notifications to partner servers,
-* HTTP REST API for management and analytics,
-* HTTP redirection API for monetization of mobile users.
+  * E-mail notifications,
+  * HTTP notifications to partner servers,
+  * HTTP REST API for management and analytics,
+  * HTTP redirection API for monetization of mobile users.
