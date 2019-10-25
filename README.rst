@@ -1,8 +1,5 @@
-Megasyst
-========
-
 Common information
-------------------
+==================
 
 Megasyst is a multi purpose platform for monetization of premium content, services and mobile user traffic.
 Main monetization channels includes Web, SMS, USSD.
