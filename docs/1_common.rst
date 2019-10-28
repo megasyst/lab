@@ -19,3 +19,13 @@ The platform provides next automated communication channels:
   * HTTP notifications to partner servers,
   * HTTP REST API for management and analytics,
   * HTTP redirection API for monetization of mobile users.
+
+HTTP notifications to partner servers
+-------------------------------------
+
+The platform notificates partners by configured HTTP method about every significant event like starting or stopping of subscription, earnings, withdrawals and etc.
+
+HTTP notifications can be configured for:
+  * HTTP or HTTPS protocol
+  * GET or POST method
+  * WWW or JSON data format
