@@ -25,8 +25,7 @@ The platform notificates partners by HTTP with next parameters:
   * **trigger**, start keyword
 
 Example of notification in WWW data format:
-
-  ad_channel=SYSTEM&carrier=12301&country=XX&currency=XXX&data=trigger+test&event=OTP&id=12345678901234567890&method=SMS&price=0.1&service=MYSERVICE&sn=1234&subscriber=123456789012&subscriber_currency=XXX&subscriber_price=1.0&timestamp=2020-20-20+01%3A01%3A01+%2B0000&trigger=TRIGGER
+  ``ad_channel=SYSTEM&carrier=12301&country=XX&currency=XXX&data=trigger+test&event=OTP&id=12345678901234567890&method=SMS&price=0.1&service=MYSERVICE&sn=1234&subscriber=123456789012&subscriber_currency=XXX&subscriber_price=1.0&timestamp=2020-20-20+01%3A01%3A01+%2B0000&trigger=TRIGGER``
 
 MT SMS delivery report for MT based billing
 -------------------------------------------
