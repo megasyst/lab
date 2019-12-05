@@ -6,43 +6,42 @@ Order via CLICK, MO SMS, PIN, USSD
 ----------------------------------
 
 The platform notificates partners by HTTP with next parameters:
-  * **id**, event identifier
-  * **timestamp**, integer timestamp
-  * **status**, (FAILED, SUCCESSFUL, WAITING)
-  * **event**, (OTP)
-  * **trigger**, start keyword
-  * **method**, order method (CLICK, PIN, SMS, USSD)
-  * **country**, country
+  * **ad_channel**, ad channel identifier (by default: SYSTEM)
   * **carrier**, mobile network
-  * **sn**, mobile service number
-  * **body**, SMS text
-  * **subscriber_id**, end user identifier or MSISDN
-  * **subscriber_price**: end user price
-  * **subscriber_currency**: end user currency
-  * **ad_channel_id**, ad channel identifier (by default: SYSTEM)
-  * **service_id**, premium service identifier
-  * **price**, partner earning amount (0 for MT based billing)
+  * **country**, country
   * **currency**, partner earning currency
+  * **data**, SMS text
+  * **event**, (OTP)
+  * **id**, event identifier
+  * **method**, order method (CLICK, PIN, SMS, USSD)
+  * **price**, partner earning amount (0 for MT based billing)
+  * **service**, premium service identifier
+  * **sn**, mobile service number
+  * **status**, (FAILED, SUCCESSFUL, WAITING)
+  * **subscriber**, end user identifier or MSISDN
+  * **subscriber_currency**: end user currency
+  * **subscriber_price**: end user price (0 for MT based billing)
+  * **timestamp**, integer timestamp
+  * **trigger**, start keyword
 
 MT SMS delivery report for MT based billing
 -------------------------------------------
 
 The platform notificates partners by HTTP with next parameters:
-  * **id**, event identifier
-  * **timestamp**, integer timestamp
-  * **status**, (FAILED, SUCCESSFUL, WAITING)
-  * **event**, (OTP)
-  * **trigger**, start keyword
-  * **method**, (DLR)
-  * **country**, country
+  * **ad_channel**, ad channel identifier (by default: SYSTEM)
   * **carrier**, mobile network
-  * **sn**, mobile service number
-  * **body**, SMS text
-  * **sms_id**, order identifier
-  * **subscriber_id**, end user identifier or MSISDN
-  * **subscriber_price**: end user price
-  * **subscriber_currency**: end user currency
-  * **ad_channel_id**, ad channel identifier (by default: SYSTEM)
-  * **service_id**, premium service identifier
-  * **price**, partner earning amount
+  * **country**, country
   * **currency**, partner earning currency
+  * **data**, SMS text
+  * **event**, (OTP)
+  * **id**, event identifier
+  * **method**, order method (DLR)
+  * **price**, partner earning amount
+  * **service**, premium service identifier
+  * **sn**, mobile service number
+  * **status**, (FAILED, SUCCESSFUL, WAITING)
+  * **subscriber**, end user identifier or MSISDN
+  * **subscriber_currency**: end user currency
+  * **subscriber_price**: end user price
+  * **timestamp**, integer timestamp
+  * **trigger**, start keyword
