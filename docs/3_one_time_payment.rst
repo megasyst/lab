@@ -9,7 +9,7 @@ The platform notificates partners by HTTP with next parameters:
   * **id**, event identifier
   * **timestamp**, integer timestamp
   * **status**, (FAILED, SUCCESSFUL, WAITING)
-  * **event**, (SUBSCRIPTION)
+  * **event**, (OTP)
   * **trigger**, start keyword
   * **method**, order method (CLICK, PIN, SMS, USSD)
   * **country**, country
@@ -31,7 +31,7 @@ The platform notificates partners by HTTP with next parameters:
   * **id**, event identifier
   * **timestamp**, integer timestamp
   * **status**, (FAILED, SUCCESSFUL, WAITING)
-  * **event**, (SUBSCRIPTION)
+  * **event**, (OTP)
   * **trigger**, start keyword
   * **method**, (DLR)
   * **country**, country
