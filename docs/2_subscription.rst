@@ -5,6 +5,34 @@ Premium subscription
 Starting of subscription
 ------------------------
 
+Subscriber can start a subscription using methods available in his country:
+  * via SMS with predefined text keyword
+  * via web browser by the link http://pay.megasyst.com/start/[KEYWORD]?[YOUR_CUSTOM_PARAMS]
+
+For web based subscription process subscriber will be redirected to a callback URL from the service settings with params:
+  * **action** = SUBSCRIPTION | OTP
+  * **carrier**
+  * **country**
+  * **id**, event identifier
+  * **msisdn**, phone number of subscriber
+  * **network** = CARRIER | COMMON
+  * **status**:
+    - ALREADY_SUBSCRIBED
+    - CARRIER_REDIRECTION
+    - COUNTRY_UNAVAILABLE
+    - FREQUENTLY_REQUEST
+    - LONG_CONTENT_REQUEST
+    - MSISDN_WAITING
+    - NETWORK_ERROR
+    - PIN_WAITING
+    - SESSION_UNAVAILABLE
+    - SUBSCRIPTION_ACCEPTED
+    - SUBSCRIPTION_REJECTED
+    - SUSPECTED_MSISDN
+    - TRIGGER_UNAVAILABLE
+    - UNHANDLED_EVENT
+  * **trigger**, service keyword
+
 The platform notificates partners by HTTP with next parameters:
   * **id**, event identifier
   * **timestamp**, integer timestamp
