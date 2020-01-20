@@ -16,21 +16,7 @@ For web based subscription process subscriber will be redirected to a callback U
   * **id**, event identifier
   * **msisdn**, phone number of subscriber
   * **network** = CARRIER | COMMON
-  * **status**:
-    - ALREADY_SUBSCRIBED
-    - CARRIER_REDIRECTION
-    - COUNTRY_UNAVAILABLE
-    - FREQUENTLY_REQUEST
-    - LONG_CONTENT_REQUEST
-    - MSISDN_WAITING
-    - NETWORK_ERROR
-    - PIN_WAITING
-    - SESSION_UNAVAILABLE
-    - SUBSCRIPTION_ACCEPTED
-    - SUBSCRIPTION_REJECTED
-    - SUSPECTED_MSISDN
-    - TRIGGER_UNAVAILABLE
-    - UNHANDLED_EVENT
+  * **status** = **ALREADY_SUBSCRIBED** | CARRIER_REDIRECTION | COUNTRY_UNAVAILABLE | FREQUENTLY_REQUEST | LONG_CONTENT_REQUEST | MSISDN_WAITING | NETWORK_ERROR | PIN_WAITING | SESSION_UNAVAILABLE | **SUBSCRIPTION_ACCEPTED** | **SUBSCRIPTION_REJECTED** | SUSPECTED_MSISDN | TRIGGER_UNAVAILABLE | UNHANDLED_EVENT
   * **trigger**, service keyword
 
 The platform notificates partners by HTTP with next parameters:
