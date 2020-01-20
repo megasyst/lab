@@ -7,7 +7,7 @@ Starting of subscription
 
 Subscriber can start a subscription using methods available in his country:
   * via SMS with predefined text keyword
-  * via web browser by the link http://pay.megasyst.com/start/[KEYWORD]?[YOUR_CUSTOM_PARAMS]
+  * via web browser by the link http://pay.megasyst.com/start/{KEYWORD}?{YOUR_CUSTOM_PARAMS}
 
 For web based subscription process subscriber will be redirected to a callback URL from the service settings with params:
   * **action** = SUBSCRIPTION | OTP
