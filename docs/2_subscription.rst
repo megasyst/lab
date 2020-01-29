@@ -127,4 +127,4 @@ Megasyst notificates partners by HTTP with next parameters:
   
   Example::
   
-    ad_channel=SYSTEM&carrier=12345&country=XX&event=RENEWAL&free_period=86400&id=12345678901234567891&renewal_period=86400&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=SMS&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
+    ad_channel=SYSTEM&carrier=12345&country=XX&currency=XXX&event=RENEWAL&id=12345678901234567891&price=1.23&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscriber_currency=XXX&subscriber_price=2.34&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=SMS&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
