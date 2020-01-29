@@ -109,7 +109,7 @@ Megasyst notificates partners by HTTP with next parameters:
   * **ad_channel**, ad channel identifier (by default: SYSTEM)
   * **carrier**, mobile network
   * **country**, country
-  * **event** = UNSUBSCRIPTION
+  * **event** = RENEWAL
   * **id**, event identifier
   * **service**, premium service identifier
   * **sn**, mobile service number
