@@ -109,12 +109,16 @@ Megasyst notificates partners by HTTP with next parameters:
   * **ad_channel**, ad channel identifier (by default: SYSTEM)
   * **carrier**, mobile network
   * **country**, country
+  * **currency**, currency of reward
   * **event** = RENEWAL
   * **id**, event identifier
+  * **price**, reward amount
   * **service**, premium service identifier
   * **sn**, mobile service number
   * **status** = FAILED | **SUCCESSFUL** | WAITING
   * **subscriber**, end user identifier or MSISDN
+  * **subscriber_currency**, currency of end user price
+  * **subscriber_price**, end user price
   * **subscription**, id of subscription order
   * **trigger_data**, raw keyword or SMS body
   * **trigger_flow** = CLICK | PIN | SMS
