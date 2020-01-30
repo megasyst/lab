@@ -2,17 +2,21 @@
 Mobile Subscriptions
 =====================
 
-Megasyst's platform sends SMS to user Welcome SMS with service information;
+We devide subscription's activation process on 3 flows: 
+1. Click flow, also known as HE flow or WAP flow;
+2. PIN flow, also known as PIN-submit or WEB flow or App flow;
+3. SMS flow, also known as SMS MO flow or SMS flow,
 
+App flow;(Megasyst's platform sends SMS to user Welcome SMS with service information;
 
-Starting subscription via web (CLICK/PIN)
+Starting subscription on Click flow
 -----------------------------------------
 
 Common steps:
-  1. Subscriber wants to use the premium service and sees service rules on partner's side
-  2. Subscriber goes to http://pay.megasyst.com/start/{KEYWORD}?{ANY_PREMIUM_SERVICE_CUSTOM_PARAMS}
-  3. Subscriber accepts or rejects the premium service rules with available technical methods on his network
-  4. Megasyst redirects him to a callback URL from the service settings with ANY_PREMIUM_SERVICE_CUSTOM_PARAMS and result parameters
+  1. User wants to subscribe the premium service on merchant's side;
+  2. User redirects to http://pay.megasyst.com/start/{KEYWORD}?{ANY_PREMIUM_SERVICE_CUSTOM_PARAMS};
+  3. User accepts subscription service terms and conditions by clicking confirmation button;
+  4. Megasyst's platform redirects user to the callback URL of the service with ANY_PREMIUM_SERVICE_CUSTOM_PARAMS and result parameters
   
      * **ad_channel**, ad channel identifier (by default: SYSTEM)
      * **carrier**, mobile network
@@ -22,7 +26,7 @@ Common steps:
      * **service**, premium service identifier
      * **status** = **ALREADY_SUBSCRIBED** | CARRIER_REDIRECTION | COUNTRY_UNAVAILABLE | FREQUENTLY_REQUEST | LONG_CONTENT_REQUEST | MSISDN_WAITING | NETWORK_ERROR | PIN_WAITING | SESSION_UNAVAILABLE | **SUCCESSFUL** | FAILED | SUSPECTED_MSISDN | TRIGGER_UNAVAILABLE | UNHANDLED_EVENT
      * **subscriber**, end user identifier or MSISDN
-     * **trigger_flow**, order method (CLICK, PIN, SMS, USSD)
+     * **trigger_flow**, order method (CLICK)
      * **trigger_keyword**, normalized keyword
    
    Example::
