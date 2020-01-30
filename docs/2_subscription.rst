@@ -2,7 +2,7 @@
 Mobile Subscriptions
 =====================
 
-We devide subscription's activation process on 3 flows: 
+We divide subscription's activation process on 3 flows: 
 1. Click flow, also known as HE flow or WAP flow;
 2. PIN flow, also known as PIN-submit or WEB flow or App flow;
 3. SMS flow, also known as SMS MO flow or SMS flow,
