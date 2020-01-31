@@ -3,7 +3,7 @@ Mobile Subscriptions
 =====================
 
 We divide subscription's activation process on 3 flows: 
-  1. Click flow, also known as HE flow or WAP flow;
+  1. Click flow, also known as HE flow, 3G flow or WAP flow;
   2. PIN flow, also known as PIN-submit or WEB flow or App flow;
   3. SMS flow, also known as SMS MO flow, SMS MT flow , SMS flow or App flow;
 
@@ -39,7 +39,7 @@ Starting subscription on PIN flow
 
 Common steps:
   1. User wants to subscribe the premium service on merchant's landing page or in app;
-  2. User inputs MSISDN;
+  2. User inputs MSISDN either on merchant's landing page/app or on the  ;
   2. User redirects to http://pay.megasyst.com/start/{KEYWORD}?{ANY_PREMIUM_SERVICE_CUSTOM_PARAMS};
   3. User accepts subscription service terms and conditions by clicking confirmation button;
   4. Megasyst's platform redirects user to the callback URL of the service with ANY_PREMIUM_SERVICE_CUSTOM_PARAMS and result parameters
@@ -92,10 +92,10 @@ Common steps:
   4. Megasyst's platform sends SMS to user Welcome SMS with service information;
 
   
-Subscription renewal
+Renewal of subscription
 --------------------
 
-Megasyst notificates partners by HTTP with next parameters:
+Megasyst notificates merchants by HTTP with following parameters:
   * **ad_channel**, ad channel identifier (by default: SYSTEM)
   * **carrier**, mobile network
   * **country**, country
@@ -120,9 +120,9 @@ Megasyst notificates partners by HTTP with next parameters:
     ad_channel=SYSTEM&carrier=12345&country=XX&currency=XXX&event=RENEWAL&id=12345678901234567891&price=1.23&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscriber_currency=XXX&subscriber_price=2.34&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=SMS&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
 
 
-Stopping of subscription
+Deactivation of subscription
 ------------------------
-
+User may stop/deactivate active subscription at any time.
 Megasyst notificates partners by HTTP with next parameters:
   * **ad_channel**, ad channel identifier (by default: SYSTEM)
   * **carrier**, mobile network
@@ -141,3 +141,5 @@ Megasyst notificates partners by HTTP with next parameters:
 Example::
 
   ad_channel=SYSTEM&carrier=12345&country=XX&event=UNSUBSCRIPTION&id=12345678901234567892&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&trigger_data=stop+abc&trigger_flow=SMS&trigger_keyword=STOP&trigger_time=2020-01-01+01%3A01%3A01+UTC
+
+Megasyst's platform sends SMS to user with information about stop of active subscription service.
