@@ -23,7 +23,7 @@ Common steps:
      * **event** = SUBSCRIPTION
      * **id**, event identifier
      * **service**, premium service identifier
-     * **status** = **ALREADY_SUBSCRIBED** | CARRIER_REDIRECTION | COUNTRY_UNAVAILABLE | FREQUENTLY_REQUEST | LONG_CONTENT_REQUEST | MSISDN_WAITING | NETWORK_ERROR | PIN_WAITING | SESSION_UNAVAILABLE | **SUCCESSFUL** | FAILED | SUSPECTED_MSISDN | TRIGGER_UNAVAILABLE | UNHANDLED_EVENT
+     * **status** = **SUCCESSFUL** ( also could be following statuses: ALREADY_SUBSCRIBED | COUNTRY_UNAVAILABLE | FREQUENTLY_REQUEST | LONG_CONTENT_REQUEST | MSISDN_WAITING | NETWORK_ERROR | PIN_WAITING | SESSION_UNAVAILABLE | FAILED | SUSPECTED_MSISDN | TRIGGER_UNAVAILABLE | UNHANDLED_EVENT )
      * **subscriber**, end user identifier or MSISDN
      * **trigger_flow**, order method (CLICK)
      * **trigger_keyword**, normalized keyword
@@ -39,10 +39,8 @@ Starting subscription on PIN flow
 
 Common steps:
   1. User wants to subscribe the premium service on merchant's landing page or in app;
-  2. User inputs MSISDN either on merchant's landing page/app or on the  ;
-  2. User redirects to http://pay.megasyst.com/start/{KEYWORD}?{ANY_PREMIUM_SERVICE_CUSTOM_PARAMS};
-  3. User accepts subscription service terms and conditions by clicking confirmation button;
-  4. Megasyst's platform redirects user to the callback URL of the service with ANY_PREMIUM_SERVICE_CUSTOM_PARAMS and result parameters
+  2. Merchant requests Megasyst to send user a PIN-code when user inputs MSISDN either on merchant's landing page/app or on the;
+  3. Megasyst's platform sends an SMS with a PIN-code to user, meantime notifies merchant's callback URL with status = PIN_WAITING
   
      * **ad_channel**, ad channel identifier (by default: SYSTEM)
      * **carrier**, mobile network
@@ -50,15 +48,36 @@ Common steps:
      * **event** = SUBSCRIPTION
      * **id**, event identifier
      * **service**, premium service identifier
-     * **status** = **ALREADY_SUBSCRIBED** | COUNTRY_UNAVAILABLE | FREQUENTLY_REQUEST | LONG_CONTENT_REQUEST | MSISDN_WAITING | NETWORK_ERROR | PIN_WAITING | SESSION_UNAVAILABLE | **SUCCESSFUL** | FAILED | SUSPECTED_MSISDN | TRIGGER_UNAVAILABLE | UNHANDLED_EVENT
+     * **status** = **PIN_WAITING**
+     
+      Example::
+  
+     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&id=12345678901234567890&service=ABC&status=PIN_WAITING&subscriber=12345678900&trigger_flow=PIN&trigger_keyword=ABC
+     
+     
      * **subscriber**, end user identifier or MSISDN
-     * **trigger_flow**, order method (CLICK)
+     * **trigger_flow**, order method (PIN)
+     * **trigger_keyword**, normalized keyword
+     
+  4. Merchant requests a validation of the PIN-code by Megasyst, after user inputs PIN-code on the landing page or in app;
+  5. Megasyst's platform notifies merchant with result parameters
+  
+     * **ad_channel**, ad channel identifier (by default: SYSTEM)
+     * **carrier**, mobile network
+     * **country**, country
+     * **event** = SUBSCRIPTION
+     * **id**, event identifier
+     * **service**, premium service identifier
+     * **status** = **SUCCESSFUL** (also could be following statuses: ALREADY_SUBSCRIBED | COUNTRY_UNAVAILABLE | FREQUENTLY_REQUEST | LONG_CONTENT_REQUEST | MSISDN_WAITING | NETWORK_ERROR | PIN_WAITING | SESSION_UNAVAILABLE | FAILED | SUSPECTED_MSISDN | TRIGGER_UNAVAILABLE | UNHANDLED_EVENT )
+     * **subscriber**, end user identifier or MSISDN
+     * **trigger_flow**, order method (PIN)
      * **trigger_keyword**, normalized keyword
    
    Example::
   
-     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&id=12345678901234567890&service=ABC&status=SUCCESSFUL&subscriber=12345678900&trigger_flow=CLICK&trigger_keyword=ABC
-5. Megasyst's platform sends Welcome SMS with service information to user;  
+     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&id=12345678901234567890&service=ABC&status=SUCCESSFUL&subscriber=12345678900&trigger_flow=PIN&trigger_keyword=ABC
+     
+6. Megasyst's platform sends Welcome SMS with service information to user;  
 
 
 Starting subscription via SMS flow (MO/MT SMS)
@@ -78,7 +97,7 @@ Common steps:
      * **renewal_period**, period of time for renew the premium subscription service
      * **service**, premium service identifier
      * **sn**, mobile service number
-     * **status**, (FAILED, SUCCESSFUL, WAITING)
+     * **status**, SUCCESSFUL (also could be following statuses: FAILED | WAITING)
      * **subscriber**, end user identifier or MSISDN
      * **trigger_data**, raw keyword or SMS body
      * **trigger_flow** = SMS
@@ -105,7 +124,7 @@ Megasyst notificates merchants by HTTP with following parameters:
   * **price**, reward amount
   * **service**, premium service identifier
   * **sn**, mobile service number
-  * **status** = FAILED | **SUCCESSFUL** | WAITING
+  * **status** = SUCCESSFUL (also could be following statuses: FAILED | WAITING)
   * **subscriber**, end user identifier or MSISDN
   * **subscriber_currency**, currency of end user price
   * **subscriber_price**, end user price
@@ -131,7 +150,7 @@ Megasyst notificates partners by HTTP with next parameters:
   * **id**, event identifier
   * **service**, premium service identifier
   * **sn**, mobile service number
-  * **status** = FAILED | **SUCCESSFUL** | WAITING
+  * **status** = SUCCESSFUL (also could be following statuses: FAILED | WAITING)
   * **subscriber**, end user identifier or MSISDN
   * **trigger_data**, raw keyword or SMS body
   * **trigger_flow** = CLICK | PIN | SMS
