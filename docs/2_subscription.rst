@@ -78,7 +78,7 @@ Common steps:
     * **status**, SUCCESSFUL (also could be following statuses: FAILED | WAITING)
     * **subscriber**, end user identifier or MSISDN
     * **trigger_data**, raw keyword or SMS body
-    * **trigger_flow** = SMS
+    * **trigger_flow**, order method (SMS)
     * **trigger_keyword**, normalized keyword
     * **trigger_time**, integer timestamp
  
