@@ -30,7 +30,7 @@ Common steps:
   Example::
  
     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&id=12345678901234567890&service=ABC&status=SUCCESSFUL&subscriber=12345678900&trigger_flow=CLICK&trigger_keyword=ABC
-5. Megasyst's platform sends Welcome SMS with service information to user;     
+5. User receives confirmation SMS with service information.
 
 Starting subscription on PIN flow
 -----------------------------------------
@@ -56,7 +56,7 @@ Common steps:
   
      ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&id=12345678901234567890&service=ABC&status=SUCCESSFUL&subscriber=12345678900&trigger_flow=PIN&trigger_keyword=ABC
      
-  6. Megasyst's platform sends Welcome SMS with service information to user;  
+  6. User receives confirmation SMS with service information.
 
 
 Starting subscription via SMS flow (MO/MT SMS)
@@ -86,7 +86,7 @@ Common steps:
  
      ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&free_period=86400&id=12345678901234567890&renewal_period=86400&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=SMS&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
    
-  4. Megasyst's platform sends SMS to user Welcome SMS with service information;
+  4. User receives confirmation SMS with service information.
 
   
 Renewal of subscription
@@ -116,6 +116,7 @@ Megasyst notificates merchants by HTTP with following parameters:
   
     ad_channel=SYSTEM&carrier=12345&country=XX&currency=XXX&event=RENEWAL&id=12345678901234567891&price=1.23&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscriber_currency=XXX&subscriber_price=2.34&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=SMS&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
 
+In case of subscription renewal, user could be notified with SMS, however it depends on the exact carrier(s) subscription rules.
 
 Deactivation of subscription
 ------------------------
@@ -139,4 +140,4 @@ Megasyst notificates partners by HTTP with next parameters:
 
     ad_channel=SYSTEM&carrier=12345&country=XX&event=UNSUBSCRIPTION&id=12345678901234567892&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&trigger_data=stop+abc&trigger_flow=SMS&trigger_keyword=STOP&trigger_time=2020-01-01+01%3A01%3A01+UTC
 
-Megasyst's platform sends SMS to user with information about stop of active subscription service.
+User receives confirmation SMS about unsubscription.
