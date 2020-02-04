@@ -16,11 +16,7 @@ The platform provides administration of premium services and promotion channels 
 
 IMPORTANT
 
-Country code is provided as two-letter code defined in ISO 3166-1:
-https://en.wikipedia.org/wiki/Mobile_country_code
-
-Mobile carriers name/Mobile network operator names:
-Link to github..
+For Country code(provided as two-letter code defined in ISO 3166-1) and Mobile network operator's brand refer to https://en.wikipedia.org/wiki/Mobile_country_code
 
 The platform provides following communication channels:
   * HTTP notifications to merchant servers,
