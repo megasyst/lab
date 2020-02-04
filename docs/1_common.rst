@@ -14,18 +14,18 @@ The platform is designed for: premium content owners, premium service providers,
 
 The platform provides administration of premium services and promotion channels for their monetization, analytics and automated notification of partners.
 
-The platform provides next automated communication channels:
-  * E-mail notifications,
-  * HTTP notifications to partner servers,
+The platform provides following communication channels:
+  * HTTP notifications to merchant servers,
   * HTTP REST API for management and analytics,
-  * HTTP redirection API for monetization of mobile users.
+  * HTTP redirection API for monetization of mobile users,
+  * E-mail notifications.
 
 HTTP notifications to partner servers
 -------------------------------------
 
 The platform notificates partners by configured HTTP method about every significant event like starting or stopping of subscription, earnings, withdrawals and etc.
 
-HTTP notifications can be configured for:
+HTTP notifications available:
   * HTTP or HTTPS protocol
   * GET or POST method
   * WWW or JSON data format
