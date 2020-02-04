@@ -14,6 +14,14 @@ The platform is designed for: premium content owners, premium service providers,
 
 The platform provides administration of premium services and promotion channels for their monetization, analytics and automated notification of partners.
 
+IMPORTANT
+
+Country code is provided as two-letter code defined in ISO 3166-1:
+https://en.wikipedia.org/wiki/Mobile_country_code
+
+Mobile carriers name/Mobile network operator names:
+Link to github..
+
 The platform provides following communication channels:
   * HTTP notifications to merchant servers,
   * HTTP REST API for management and analytics,
