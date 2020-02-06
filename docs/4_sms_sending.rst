@@ -10,7 +10,9 @@ Response to order
 -----------------
 
 Partner can send MT SMS via HTTP API by request with authorization token in the header.
+
 Partner can send messages to subscribers only for their own premium services.
+
 Usually response messages has limits as 1 free SMS for 1 order of service.
 
 Request format:
