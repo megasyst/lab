@@ -15,7 +15,7 @@ The platform notificates partners by HTTP with next parameters:
   * **flow** = **CLICK** or **PIN** or **MOSMS** or **USSD**
   * **id**, event identifier
   * **keyword**, trigger keyword
-  * **need_mt_sms** = **1** (if this order needs to additional MT SMS from partner)
+  * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
   * **price**, partner earning amount (not included for billing by MT SMS)
   * **service**, premium service identifier
   * **sn**, mobile service number
