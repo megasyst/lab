@@ -2,31 +2,33 @@
 One time payment (OTP)
 ======================
 
-Order via CLICK, MO SMS, PIN, USSD
-----------------------------------
+Order via CLICK, SMS, PIN, USSD
+-------------------------------
 
 The platform notificates partners by HTTP with next parameters:
   * **ad_channel**, ad channel identifier (by default: SYSTEM)
   * **carrier**, mobile network
   * **country**, country
-  * **currency**, partner earning currency
-  * **data**, SMS text
-  * **event**, (OTP)
+  * **currency**, partner earning currency (not included for billing by MT SMS)
+  * **data**, SMS body or other data
+  * **event** = **OTP**
+  * **flow** = **CLICK** or **PIN** or **MOSMS** or **USSD**
   * **id**, event identifier
-  * **method**, order method (CLICK, PIN, SMS, USSD)
-  * **price**, partner earning amount (0 for MT based billing)
+  * **keyword**, trigger keyword
+  * **need_mt_sms**, boolean flag (if this order needs to additional MT SMS from partner)
+  * **price**, partner earning amount (not included for billing by MT SMS)
   * **service**, premium service identifier
   * **sn**, mobile service number
   * **status**, (FAILED, SUCCESSFUL, WAITING)
   * **subscriber**, end user identifier or MSISDN
-  * **subscriber_currency**: end user currency
-  * **subscriber_price**: end user price (0 for MT based billing)
-  * **timestamp**, integer timestamp
-  * **trigger**, start keyword
+  * **subscriber_currency**: end user currency (not included for billing by MT SMS)
+  * **subscriber_price**: end user price (not included for billing by MT SMS)
+  * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
 
 **Example of notification in WWW data format:** ::
 
-  ad_channel=SYSTEM&carrier=12301&country=XX&currency=XXX&data=trigger+test&event=OTP&id=12345678901234567890&method=SMS&price=0.1&service=MYSERVICE&sn=1234&status=SUCCESSFUL&subscriber=123456789012&subscriber_currency=XXX&subscriber_price=1.0&timestamp=2020-20-20+01%3A01%3A01+%2B0000&trigger=TRIGGER
+
+  ad_channel=SYSTEM& carrier=12301& country=XX& currency=XXX& data=trigger+123& event=OTP& flow=MOSMS& id=12345678901234567890& keyword=TRIGGER& need_mt_sms=1& price=0.1& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=123456789012& subscriber_currency=XXX& subscriber_price=1.0& time=2020-01-01+01%3A01%3A01+UTC
 
 MT SMS delivery report for MT based billing
 -------------------------------------------
@@ -36,19 +38,21 @@ The platform notificates partners by HTTP with next parameters:
   * **carrier**, mobile network
   * **country**, country
   * **currency**, partner earning currency
-  * **data**, SMS text
-  * **event**, (OTP)
+  * **data**, SMS body or other data
+  * **event** = **OTP**
+  * **flow** = **MTSMS**
   * **id**, event identifier
-  * **method**, order method (DLR)
+  * **keyword**, trigger keyword
   * **price**, partner earning amount
   * **service**, premium service identifier
   * **sn**, mobile service number
-  * **status**, (FAILED, SUCCESSFUL, WAITING)
+  * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
   * **subscriber**, end user identifier or MSISDN
   * **subscriber_currency**: end user currency
   * **subscriber_price**: end user price
-  * **timestamp**, integer timestamp
+  * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
 
 **Example of notification in WWW data format:** ::
 
-  ad_channel=SYSTEM&carrier=12301&country=XX&currency=XXX&data=trigger+test&event=OTP&id=12345678901234567890&method=DLR&price=0.1&service=MYSERVICE&sn=1234&status=SUCCESSFUL&subscriber=123456789012&subscriber_currency=XXX&subscriber_price=1.0&timestamp=2020-20-20+01%3A01%3A01+%2B0000
+
+  ad_channel=SYSTEM& carrier=12301& country=XX& currency=XXX& data=trigger+123& event=OTP& flow=MTSMS& id=12345678901234567890& keyword=TRIGGER& price=0.1& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=123456789012& subscriber_currency=XXX& subscriber_price=1.0& time=2020-01-01+01%3A01%3A01+UTC
