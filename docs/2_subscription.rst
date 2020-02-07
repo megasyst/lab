@@ -19,38 +19,44 @@ Common steps:
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
     * **carrier**, mobile network
     * **country**, country
-    * **event** = SUBSCRIPTION
+    * **event** = **SUBSCRIPTION**
+    * **flow** = **CLICK**
     * **id**, event identifier
+    * **keyword**, trigger keyword
     * **service**, premium service identifier
     * **status** = **SUCCESSFUL** or **ALREADY_SUBSCRIBED**, other values indicate the inability to subscribe for some reason
     * **subscriber**, end user identifier or MSISDN
-    * **trigger_flow**, order method (CLICK)
-    * **trigger_keyword**, normalized keyword
    
   Example::
  
-    ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&id=12345678901234567890&service=ABC&status=SUCCESSFUL&subscriber=12345678900&trigger_flow=CLICK&trigger_keyword=ABC
+    ad_channel=SYSTEM& carrier=12345& country=XX& event=SUBSCRIPTION& flow=CLICK& id=12345678901234567890& keyword=TRIGGER& service=MYSERVICE& status=SUCCESSFUL& subscriber=12345678900
 
   5. Megasyst notificates merchant by HTTP with following parameters:
+  
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile carrier/network operator
+    * **carrier**, mobile network
     * **country**, country
-    * **event** = SUBSCRIPTION
-    * **free_period**, free time for using the premium service in seconds
+    * **currency**, partner earning currency (not included if payment is separate)
+    * **data**, order request data
+    * **event** = **SUBSCRIPTION**
+    * **flow** = **CLICK**
+    * **free_period**, free time for using the premium service (in seconds)
     * **id**, event identifier
-    * **renewal_period**, period of time for renew the premium subscription service
+    * **keyword**, trigger keyword
+    * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
+    * **price**, partner earning amount (not included if payment is separate)
+    * **renewal_period**, period of time for renew the premium subscription service (in seconds)
     * **service**, premium service identifier
     * **sn**, mobile service number
-    * **status**, SUCCESSFUL (also could be following statuses: FAILED | WAITING)
+    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
     * **subscriber**, end user identifier or MSISDN
-    * **trigger_data**, raw keyword or SMS body
-    * **trigger_flow**, order method (CLICK)
-    * **trigger_keyword**, normalized keyword
-    * **trigger_time**, integer timestamp
+    * **subscriber_currency**: end user currency (not included if payment is separate)
+    * **subscriber_price**: end user price (not included if payment is separate)
+    * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
  
   Example::
  
-     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&free_period=86400&id=12345678901234567890&renewal_period=86400&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=CLICK&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
+     ad_channel=SYSTEM& carrier=12345& country=XX& currency=XXX& data=trigger& event=SUBSCRIPTION& flow=CLICK& free_period=86400& id=12345678901234567890& keyword=TRIGGER& price=0.1& renewal_period=86400& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& subscriber_currency=XXX& subscriber_price=0.1& time=2020-01-01+01%3A01%3A01+UTC
 
   6. User receives confirmation SMS with subscription service information.
 
@@ -66,98 +72,111 @@ Common steps:
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
     * **carrier**, mobile network
     * **country**, country
-    * **event** = SUBSCRIPTION
+    * **event** = **SUBSCRIPTION**
+    * **flow** = **PIN**
     * **id**, event identifier
+    * **keyword**, trigger keyword
     * **service**, premium service identifier
     * **status** = **SUCCESSFUL** or **ALREADY_SUBSCRIBED**, other values indicate the inability to subscribe for some reason
     * **subscriber**, end user identifier or MSISDN
-    * **trigger_flow**, order method (PIN)
-    * **trigger_keyword**, normalized keyword
    
   Example::
-  
-     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&id=12345678901234567890&service=ABC&status=SUCCESSFUL&subscriber=12345678900&trigger_flow=PIN&trigger_keyword=ABC
+ 
+    ad_channel=SYSTEM& carrier=12345& country=XX& event=SUBSCRIPTION& flow=PIN& id=12345678901234567890& keyword=TRIGGER& service=MYSERVICE& status=SUCCESSFUL& subscriber=12345678900
 
   6. Megasyst notificates merchant by HTTP with following parameters:
+  
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile carrier/network operator
+    * **carrier**, mobile network
     * **country**, country
-    * **event** = SUBSCRIPTION
-    * **free_period**, free time for using the premium service in seconds
+    * **currency**, partner earning currency (not included if payment is separate)
+    * **data**, order request data
+    * **event** = **SUBSCRIPTION**
+    * **flow** = **PIN**
+    * **free_period**, free time for using the premium service (in seconds)
     * **id**, event identifier
-    * **renewal_period**, period of time for renew the premium subscription service
+    * **keyword**, trigger keyword
+    * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
+    * **price**, partner earning amount (not included if payment is separate)
+    * **renewal_period**, period of time for renew the premium subscription service (in seconds)
     * **service**, premium service identifier
     * **sn**, mobile service number
-    * **status**, SUCCESSFUL (also could be following statuses: FAILED | WAITING)
+    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
     * **subscriber**, end user identifier or MSISDN
-    * **trigger_data**, raw keyword or SMS body
-    * **trigger_flow**, order method (PIN)
-    * **trigger_keyword**, normalized keyword
-    * **trigger_time**, integer timestamp
+    * **subscriber_currency**: end user currency (not included if payment is separate)
+    * **subscriber_price**: end user price (not included if payment is separate)
+    * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
  
   Example::
  
-     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&free_period=86400&id=12345678901234567890&renewal_period=86400&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=PIN&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
+     ad_channel=SYSTEM& carrier=12345& country=XX& currency=XXX& data=trigger& event=SUBSCRIPTION& flow=PIN& free_period=86400& id=12345678901234567890& keyword=TRIGGER& price=0.1& renewal_period=86400& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& subscriber_currency=XXX& subscriber_price=0.1& time=2020-01-01+01%3A01%3A01+UTC
      
   7. User receives confirmation SMS with subscription service information.
 
 
-Starting subscription via SMS flow (MO/MT SMS)
+Starting subscription via SMS flow (MO SMS)
 ----------------------------------------------
 
 Common steps:
   1. User wants to subscribe the premium service on merchant's landing page or in app;
   2. User sends SMS with a keyword to a short number;
   3. Megasyst notificates merchant by HTTP with following parameters:
+
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile carrier/network operator
+    * **carrier**, mobile network
     * **country**, country
-    * **event** = SUBSCRIPTION
-    * **free_period**, free time for using the premium service in seconds
+    * **currency**, partner earning currency (not included if payment is separate)
+    * **data**, SMS body
+    * **event** = **SUBSCRIPTION**
+    * **flow** = **MOSMS**
+    * **free_period**, free time for using the premium service (in seconds)
     * **id**, event identifier
-    * **renewal_period**, period of time for renew the premium subscription service
+    * **keyword**, trigger keyword
+    * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
+    * **price**, partner earning amount (not included if payment is separate)
+    * **renewal_period**, period of time for renew the premium subscription service (in seconds)
     * **service**, premium service identifier
     * **sn**, mobile service number
-    * **status**, SUCCESSFUL (also could be following statuses: FAILED | WAITING)
+    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
     * **subscriber**, end user identifier or MSISDN
-    * **trigger_data**, raw keyword or SMS body
-    * **trigger_flow**, order method (SMS)
-    * **trigger_keyword**, normalized keyword
-    * **trigger_time**, integer timestamp
+    * **subscriber_currency**: end user currency (not included if payment is separate)
+    * **subscriber_price**: end user price (not included if payment is separate)
+    * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
  
   Example::
  
-     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&free_period=86400&id=12345678901234567890&renewal_period=86400&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=SMS&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
-   
+     ad_channel=SYSTEM& carrier=12345& country=XX& currency=XXX& data=trigger+123& event=SUBSCRIPTION& flow=MOSMS& free_period=86400& id=12345678901234567890& keyword=TRIGGER& price=0.1& renewal_period=86400& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& subscriber_currency=XXX& subscriber_price=0.1& time=2020-01-01+01%3A01%3A01+UTC
+
   4. User receives confirmation SMS with service subscription information.
 
   
 Renewal of subscription
---------------------
+-----------------------
 
 Megasyst notificates merchants by HTTP with following parameters:
-  * **ad_channel**, ad channel identifier (by default: SYSTEM)
-  * **carrier**, mobile network
-  * **country**, country
-  * **currency**, currency of reward
-  * **event** = RENEWAL
-  * **id**, event identifier
-  * **price**, reward amount
-  * **service**, premium service identifier
-  * **sn**, mobile service number
-  * **status** = SUCCESSFUL (also could be following statuses: FAILED | WAITING)
-  * **subscriber**, end user identifier or MSISDN
-  * **subscriber_currency**, currency of end user price
-  * **subscriber_price**, end user price
-  * **subscription**, id of subscription order
-  * **trigger_data**, raw keyword or SMS body
-  * **trigger_flow** = CLICK | PIN | SMS
-  * **trigger_keyword**, normalized keyword
-  * **trigger_time**, integer timestamp
-  
+
+    * **ad_channel**, ad channel identifier (by default: SYSTEM)
+    * **carrier**, mobile network
+    * **country**, country
+    * **currency**, partner earning currency
+    * **data**, SMS body or other data
+    * **event** = **RENEWAL**
+    * **flow** = **CLICK** or **MOSMS** or **MTSMS** or **PIN** or **USSD**
+    * **id**, event identifier
+    * **keyword**, trigger keyword
+    * **price**, partner earning amount
+    * **service**, premium service identifier
+    * **sn**, mobile service number
+    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
+    * **subscriber**, end user identifier or MSISDN
+    * **subscriber_currency**: end user currency
+    * **subscriber_price**: end user price
+    * **subscription**, id of subscription order
+    * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
+ 
   Example::
-  
-    ad_channel=SYSTEM&carrier=12345&country=XX&currency=XXX&event=RENEWAL&id=12345678901234567891&price=1.23&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscriber_currency=XXX&subscriber_price=2.34&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=SMS&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
+ 
+     ad_channel=SYSTEM& carrier=12345& country=XX& currency=XXX& data=trigger+123& event=RENEWAL& flow=MOSMS& id=12345678901234567891& keyword=TRIGGER& price=0.1& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& subscriber_currency=XXX& subscriber_price=0.1& subscription=12345678901234567890& time=2020-01-01+01%3A01%3A01+UTC
 
 In case of subscription renewal, user could be notified with SMS, however it depends on the exact carrier(s) subscription rules.
 
@@ -165,22 +184,23 @@ Deactivation of subscription
 ------------------------
 User may stop/deactivate active subscription at any time.
 Megasyst notificates partners by HTTP with next parameters:
-  * **ad_channel**, ad channel identifier (by default: SYSTEM)
-  * **carrier**, mobile network
-  * **country**, country
-  * **event** = UNSUBSCRIPTION
-  * **id**, event identifier
-  * **service**, premium service identifier
-  * **sn**, mobile service number
-  * **status** = SUCCESSFUL (also could be following statuses: FAILED | WAITING)
-  * **subscriber**, end user identifier or MSISDN
-  * **trigger_data**, raw keyword or SMS body
-  * **trigger_flow** = CLICK | PIN | SMS
-  * **trigger_keyword**, normalized keyword
-  * **trigger_time**, integer timestamp
 
+    * **ad_channel**, ad channel identifier (by default: SYSTEM)
+    * **carrier**, mobile network
+    * **country**, country
+    * **data**, SMS body
+    * **event** = **UNSUBSCRIPTION**
+    * **flow** = **MOSMS**
+    * **id**, event identifier
+    * **keyword**, trigger keyword
+    * **service**, premium service identifier
+    * **sn**, mobile service number
+    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
+    * **subscriber**, end user identifier or MSISDN
+    * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
+ 
   Example::
-
-    ad_channel=SYSTEM&carrier=12345&country=XX&event=UNSUBSCRIPTION&id=12345678901234567892&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&trigger_data=stop+abc&trigger_flow=SMS&trigger_keyword=STOP&trigger_time=2020-01-01+01%3A01%3A01+UTC
+ 
+     ad_channel=SYSTEM& carrier=12345& country=XX& data=trigger+123& event=UNSUBSCRIPTION& flow=MOSMS& id=12345678901234567890& keyword=TRIGGER& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& time=2020-01-01+01%3A01%3A01+UTC
 
 User receives confirmation SMS about unsubscription.
