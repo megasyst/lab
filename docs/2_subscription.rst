@@ -30,7 +30,29 @@ Common steps:
   Example::
  
     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&id=12345678901234567890&service=ABC&status=SUCCESSFUL&subscriber=12345678900&trigger_flow=CLICK&trigger_keyword=ABC
-5. User receives confirmation SMS with subscription service information.
+
+  5. Megasyst notificates merchant by HTTP with following parameters:
+    * **ad_channel**, ad channel identifier (by default: SYSTEM)
+    * **carrier**, mobile carrier/network operator
+    * **country**, country
+    * **event** = SUBSCRIPTION
+    * **free_period**, free time for using the premium service in seconds
+    * **id**, event identifier
+    * **renewal_period**, period of time for renew the premium subscription service
+    * **service**, premium service identifier
+    * **sn**, mobile service number
+    * **status**, SUCCESSFUL (also could be following statuses: FAILED | WAITING)
+    * **subscriber**, end user identifier or MSISDN
+    * **trigger_data**, raw keyword or SMS body
+    * **trigger_flow**, order method (CLICK)
+    * **trigger_keyword**, normalized keyword
+    * **trigger_time**, integer timestamp
+ 
+  Example::
+ 
+     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&free_period=86400&id=12345678901234567890&renewal_period=86400&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=CLICK&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
+
+  6. User receives confirmation SMS with subscription service information.
 
 Starting subscription on PIN flow
 -----------------------------------------
@@ -55,8 +77,29 @@ Common steps:
   Example::
   
      ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&id=12345678901234567890&service=ABC&status=SUCCESSFUL&subscriber=12345678900&trigger_flow=PIN&trigger_keyword=ABC
+
+  6. Megasyst notificates merchant by HTTP with following parameters:
+    * **ad_channel**, ad channel identifier (by default: SYSTEM)
+    * **carrier**, mobile carrier/network operator
+    * **country**, country
+    * **event** = SUBSCRIPTION
+    * **free_period**, free time for using the premium service in seconds
+    * **id**, event identifier
+    * **renewal_period**, period of time for renew the premium subscription service
+    * **service**, premium service identifier
+    * **sn**, mobile service number
+    * **status**, SUCCESSFUL (also could be following statuses: FAILED | WAITING)
+    * **subscriber**, end user identifier or MSISDN
+    * **trigger_data**, raw keyword or SMS body
+    * **trigger_flow**, order method (PIN)
+    * **trigger_keyword**, normalized keyword
+    * **trigger_time**, integer timestamp
+ 
+  Example::
+ 
+     ad_channel=SYSTEM&carrier=12345&country=XX&event=SUBSCRIPTION&free_period=86400&id=12345678901234567890&renewal_period=86400&service=ABC&sn=1234&status=SUCCESSFUL&subscriber=12345678900&subscription=12345678901234567890&trigger_data=abc+123&trigger_flow=PIN&trigger_keyword=ABC&trigger_time=2020-01-01+01%3A01%3A01+UTC
      
-  6. User receives confirmation SMS with subscription service information.
+  7. User receives confirmation SMS with subscription service information.
 
 
 Starting subscription via SMS flow (MO/MT SMS)
