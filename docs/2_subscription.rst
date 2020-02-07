@@ -29,7 +29,16 @@ Common steps:
    
   Example::
  
-    ad_channel=SYSTEM& carrier=12345& country=XX& event=SUBSCRIPTION& flow=CLICK& id=12345678901234567890& keyword=KEYWORD& service=MYSERVICE& status=SUCCESSFUL& subscriber=12345678900
+    ad_channel=SYSTEM& 
+    carrier=12345& 
+    country=XX& 
+    event=SUBSCRIPTION& 
+    flow=CLICK& 
+    id=12345678901234567890& 
+    keyword=KEYWORD& 
+    service=MYSERVICE& 
+    status=SUCCESSFUL& 
+    subscriber=12345678900
 
   5. Megasyst notificates merchant by HTTP with following parameters:
   
@@ -100,7 +109,16 @@ Common steps:
    
   Example::
  
-    ad_channel=SYSTEM& carrier=12345& country=XX& event=SUBSCRIPTION& flow=PIN& id=12345678901234567890& keyword=TRIGGER& service=MYSERVICE& status=SUCCESSFUL& subscriber=12345678900
+    ad_channel=SYSTEM& 
+    carrier=12345& 
+    country=XX& 
+    event=SUBSCRIPTION& 
+    flow=PIN& 
+    id=12345678901234567890& 
+    keyword=TRIGGER& 
+    service=MYSERVICE& 
+    status=SUCCESSFUL& 
+    subscriber=12345678900
 
   6. Megasyst notificates merchant by HTTP with following parameters:
   
