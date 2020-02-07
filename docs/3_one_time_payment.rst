@@ -28,7 +28,7 @@ The platform notificates partners by HTTP with next parameters:
 **Example of notification in WWW data format:** ::
 
 
-  ad_channel=SYSTEM& carrier=12301& country=XX& currency=XXX& data=trigger+123& event=OTP& flow=MOSMS& id=12345678901234567890& keyword=TRIGGER& need_mt_sms=1& price=0.1& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=123456789012& subscriber_currency=XXX& subscriber_price=1.0& time=2020-01-01+01%3A01%3A01+UTC
+  ad_channel=SYSTEM& carrier=12301& country=XX& currency=XXX& data=keyword+123& event=OTP& flow=MOSMS& id=12345678901234567890& keyword=KEYWORD& need_mt_sms=1& price=0.1& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=123456789012& subscriber_currency=XXX& subscriber_price=1.0& time=2020-01-01+01%3A01%3A01+UTC
 
 MT SMS delivery report for MT based billing
 -------------------------------------------
@@ -55,4 +55,4 @@ The platform notificates partners by HTTP with next parameters:
 **Example of notification in WWW data format:** ::
 
 
-  ad_channel=SYSTEM& carrier=12301& country=XX& currency=XXX& data=trigger+123& event=OTP& flow=MTSMS& id=12345678901234567890& keyword=TRIGGER& price=0.1& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=123456789012& subscriber_currency=XXX& subscriber_price=1.0& time=2020-01-01+01%3A01%3A01+UTC
+  ad_channel=SYSTEM& carrier=12301& country=XX& currency=XXX& data=keyword+123& event=OTP& flow=MTSMS& id=12345678901234567890& keyword=KEYWORD& price=0.1& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=123456789012& subscriber_currency=XXX& subscriber_price=1.0& time=2020-01-01+01%3A01%3A01+UTC
