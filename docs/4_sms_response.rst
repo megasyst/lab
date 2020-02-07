@@ -3,9 +3,6 @@ SMS Response to order
 =====================
 
 Merchant should send MT SMS as response to End-user either for One-time payment or Subscription order, related to own service(s) only.
-
-Usually MT SMS has limits as 1 free SMS for 1 order of service.
-
 No Bulk SMS sending is allowed!
 
 Every MT SMS should be send via HTTP API by request with authorization token in the header.
