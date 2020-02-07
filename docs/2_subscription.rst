@@ -56,7 +56,25 @@ Common steps:
  
   Example::
  
-     ad_channel=SYSTEM& carrier=12345& country=XX& currency=XXX& data=keyword& event=SUBSCRIPTION& flow=CLICK& free_period=86400& id=12345678901234567890& keyword=KEYWORD& price=0.1& renewal_period=86400& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& subscriber_currency=XXX& subscriber_price=0.1& time=2020-01-01+01%3A01%3A01+UTC
+     ad_channel=SYSTEM& 
+     carrier=12345& 
+     country=XX& 
+     currency=XXX& 
+     data=keyword& 
+     event=SUBSCRIPTION& 
+     flow=CLICK& 
+     free_period=86400& 
+     id=12345678901234567890& 
+     keyword=KEYWORD& 
+     price=0.1& 
+     renewal_period=86400& 
+     service=MYSERVICE& 
+     sn=1234& 
+     status=SUCCESSFUL& 
+     subscriber=12345678900& 
+     subscriber_currency=XXX& 
+     subscriber_price=0.1& 
+     time=2020-01-01+01%3A01%3A01+UTC
 
   6. User receives confirmation SMS with subscription service information.
 
@@ -109,7 +127,25 @@ Common steps:
  
   Example::
  
-     ad_channel=SYSTEM& carrier=12345& country=XX& currency=XXX& data=trigger& event=SUBSCRIPTION& flow=PIN& free_period=86400& id=12345678901234567890& keyword=TRIGGER& price=0.1& renewal_period=86400& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& subscriber_currency=XXX& subscriber_price=0.1& time=2020-01-01+01%3A01%3A01+UTC
+     ad_channel=SYSTEM& 
+     carrier=12345& 
+     country=XX& 
+     currency=XXX& 
+     data=trigger& 
+     event=SUBSCRIPTION& 
+     flow=PIN& 
+     free_period=86400& 
+     id=12345678901234567890& 
+     keyword=TRIGGER& 
+     price=0.1& 
+     renewal_period=86400& 
+     service=MYSERVICE& 
+     sn=1234& 
+     status=SUCCESSFUL& 
+     subscriber=12345678900& 
+     subscriber_currency=XXX& 
+     subscriber_price=0.1& 
+     time=2020-01-01+01%3A01%3A01+UTC
      
   7. User receives confirmation SMS with subscription service information.
 
@@ -145,7 +181,25 @@ Common steps:
  
   Example::
  
-     ad_channel=SYSTEM& carrier=12345& country=XX& currency=XXX& data=trigger+123& event=SUBSCRIPTION& flow=MOSMS& free_period=86400& id=12345678901234567890& keyword=TRIGGER& price=0.1& renewal_period=86400& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& subscriber_currency=XXX& subscriber_price=0.1& time=2020-01-01+01%3A01%3A01+UTC
+     ad_channel=SYSTEM& 
+     carrier=12345& 
+     country=XX& 
+     currency=XXX& 
+     data=trigger+123& 
+     event=SUBSCRIPTION& 
+     flow=MOSMS& 
+     free_period=86400& 
+     id=12345678901234567890& 
+     keyword=TRIGGER& 
+     price=0.1& 
+     renewal_period=86400& 
+     service=MYSERVICE& 
+     sn=1234& 
+     status=SUCCESSFUL&
+     subscriber=12345678900& 
+     subscriber_currency=XXX& 
+     subscriber_price=0.1& 
+     time=2020-01-01+01%3A01%3A01+UTC
 
   4. User receives confirmation SMS with service subscription information.
 
@@ -176,7 +230,24 @@ Megasyst notificates merchants by HTTP with following parameters:
  
   Example::
  
-     ad_channel=SYSTEM& carrier=12345& country=XX& currency=XXX& data=trigger+123& event=RENEWAL& flow=MOSMS& id=12345678901234567891& keyword=TRIGGER& price=0.1& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& subscriber_currency=XXX& subscriber_price=0.1& subscription=12345678901234567890& time=2020-01-01+01%3A01%3A01+UTC
+     ad_channel=SYSTEM& 
+     carrier=12345& 
+     country=XX& 
+     currency=XXX& 
+     data=trigger+123& 
+     event=RENEWAL& 
+     flow=MOSMS& 
+     id=12345678901234567891& 
+     keyword=TRIGGER& 
+     price=0.1& 
+     service=MYSERVICE& 
+     sn=1234& 
+     status=SUCCESSFUL& 
+     subscriber=12345678900& 
+     subscriber_currency=XXX& 
+     subscriber_price=0.1& 
+     subscription=12345678901234567890& 
+     time=2020-01-01+01%3A01%3A01+UTC
 
 In case of subscription renewal, user could be notified with SMS, however it depends on the exact carrier(s) subscription rules.
 
@@ -201,6 +272,18 @@ Megasyst notificates partners by HTTP with next parameters:
  
   Example::
  
-     ad_channel=SYSTEM& carrier=12345& country=XX& data=trigger+123& event=UNSUBSCRIPTION& flow=MOSMS& id=12345678901234567890& keyword=TRIGGER& service=MYSERVICE& sn=1234& status=SUCCESSFUL& subscriber=12345678900& time=2020-01-01+01%3A01%3A01+UTC
+     ad_channel=SYSTEM& 
+     carrier=12345& 
+     country=XX& 
+     data=trigger+123& 
+     event=UNSUBSCRIPTION& 
+     flow=MOSMS& 
+     id=12345678901234567890& 
+     keyword=TRIGGER& 
+     service=MYSERVICE& 
+     sn=1234& 
+     status=SUCCESSFUL& 
+     subscriber=12345678900& 
+     time=2020-01-01+01%3A01%3A01+UTC
 
 User receives confirmation SMS about unsubscription.
