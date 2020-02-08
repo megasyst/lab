@@ -236,6 +236,7 @@ Megasyst notificates merchants by HTTP with following parameters:
     * **flow** = **CLICK** or **MOSMS** or **MTSMS** or **PIN** or **USSD**
     * **id**, event identifier
     * **keyword**, trigger keyword
+    * **order**, id of subscription order
     * **price**, partner earning amount
     * **service**, premium service identifier
     * **sn**, mobile service number
@@ -243,7 +244,6 @@ Megasyst notificates merchants by HTTP with following parameters:
     * **subscriber**, end user identifier or MSISDN
     * **subscriber_currency**: end user currency
     * **subscriber_price**: end user price
-    * **order**, id of subscription order
     * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
  
   Example::
@@ -257,6 +257,7 @@ Megasyst notificates merchants by HTTP with following parameters:
      flow=MOSMS& 
      id=12345678901234567891& 
      keyword=TRIGGER& 
+     order=12345678901234567890& 
      price=0.1& 
      service=MYSERVICE& 
      sn=1234& 
@@ -264,7 +265,6 @@ Megasyst notificates merchants by HTTP with following parameters:
      subscriber=12345678900& 
      subscriber_currency=XXX& 
      subscriber_price=0.1& 
-     subscription=12345678901234567890& 
      time=2020-01-01+01%3A01%3A01+UTC
 
 In case of subscription renewal, user could be notified with SMS, however it depends on the exact carrier(s) subscription rules.
