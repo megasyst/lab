@@ -243,7 +243,7 @@ Megasyst notificates merchants by HTTP with following parameters:
     * **subscriber**, end user identifier or MSISDN
     * **subscriber_currency**: end user currency
     * **subscriber_price**: end user price
-    * **subscription**, id of subscription order
+    * **order**, id of subscription order
     * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
  
   Example::
