@@ -12,7 +12,7 @@ The platform notificates partners by HTTP with next parameters:
   * **currency**, partner earning currency (not included for billing by MT SMS)
   * **data**, SMS body or other data
   * **event** = **OTP**
-  * **flow** = **CLICK** or **PIN** or **MOSMS** or **USSD**
+  * **flow** = **CLICK** or **PIN** or **SMS** or **USSD**
   * **id**, event identifier
   * **keyword**, trigger keyword
   * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
@@ -34,7 +34,7 @@ The platform notificates partners by HTTP with next parameters:
   currency=XXX& 
   data=keyword+123& 
   event=OTP& 
-  flow=MOSMS& 
+  flow=SMS& 
   id=12345678901234567890& 
   keyword=KEYWORD& 
   need_mt_sms=1& 
@@ -57,7 +57,7 @@ The platform notificates partners by HTTP with next parameters:
   * **currency**, partner earning currency
   * **data**, SMS body or other data
   * **event** = **OTP**
-  * **flow** = **MTSMS**
+  * **flow** = **SMS**
   * **id**, event identifier
   * **keyword**, trigger keyword
   * **price**, partner earning amount
@@ -78,7 +78,7 @@ The platform notificates partners by HTTP with next parameters:
   currency=XXX& 
   data=keyword+123& 
   event=OTP& 
-  flow=MTSMS& 
+  flow=SMS& 
   id=12345678901234567890& 
   keyword=KEYWORD& 
   price=0.1& 
