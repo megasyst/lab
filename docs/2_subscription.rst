@@ -182,7 +182,7 @@ Common steps:
     * **currency**, partner earning currency (not included if payment is separate)
     * **data**, SMS body
     * **event** = **SUBSCRIPTION**
-    * **flow** = **MOSMS**
+    * **flow** = **SMS**
     * **free_period**, free time for using the premium service (in seconds)
     * **id**, event identifier
     * **keyword**, trigger keyword
@@ -205,7 +205,7 @@ Common steps:
      currency=XXX& 
      data=trigger+123& 
      event=SUBSCRIPTION& 
-     flow=MOSMS& 
+     flow=SMS& 
      free_period=86400& 
      id=12345678901234567890& 
      keyword=TRIGGER& 
@@ -233,7 +233,7 @@ Megasyst notificates merchants by HTTP with following parameters:
     * **currency**, partner earning currency
     * **data**, SMS body or other data
     * **event** = **RENEWAL**
-    * **flow** = **CLICK** or **MOSMS** or **MTSMS** or **PIN** or **USSD**
+    * **flow** = **CLICK** or **PIN** or **SMS** or **USSD**
     * **id**, event identifier
     * **keyword**, trigger keyword
     * **order**, id of subscription order
@@ -279,7 +279,7 @@ Megasyst notificates partners by HTTP with next parameters:
     * **country**, country
     * **data**, SMS body
     * **event** = **UNSUBSCRIPTION**
-    * **flow** = **MOSMS**
+    * **flow** = **SMS**
     * **id**, event identifier
     * **keyword**, trigger keyword
     * **service**, premium service identifier
@@ -295,7 +295,7 @@ Megasyst notificates partners by HTTP with next parameters:
      country=XX& 
      data=trigger+123& 
      event=UNSUBSCRIPTION& 
-     flow=MOSMS& 
+     flow=SMS& 
      id=12345678901234567890& 
      keyword=TRIGGER& 
      service=MYSERVICE& 
