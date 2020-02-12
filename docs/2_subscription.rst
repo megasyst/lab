@@ -54,7 +54,7 @@ Common steps:
     * **keyword**, trigger keyword
     * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
     * **price**, partner earning amount (not included if payment is separate)
-    * **renewal_period**, period of time for renew the premium subscription service (in seconds)
+    * **payment_schedule**, period of time for renew the premium subscription service (EVERYDAY, EVERYWEEK, WORKDAYS or other string value)
     * **service**, premium service identifier
     * **sn**, mobile service number
     * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
@@ -76,7 +76,7 @@ Common steps:
      id=12345678901234567890& 
      keyword=KEYWORD& 
      price=0.1& 
-     renewal_period=86400& 
+     payment_schedule=EVERYDAY& 
      service=MYSERVICE& 
      sn=1234& 
      status=SUCCESSFUL& 
@@ -134,7 +134,7 @@ Common steps:
     * **keyword**, trigger keyword
     * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
     * **price**, partner earning amount (not included if payment is separate)
-    * **renewal_period**, period of time for renew the premium subscription service (in seconds)
+    * **payment_schedule**, period of time for renew the premium subscription service (EVERYDAY, EVERYWEEK, WORKDAYS or other string value)
     * **service**, premium service identifier
     * **sn**, mobile service number
     * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
@@ -156,7 +156,7 @@ Common steps:
      id=12345678901234567890& 
      keyword=TRIGGER& 
      price=0.1& 
-     renewal_period=86400& 
+     payment_schedule=EVERYDAY& 
      service=MYSERVICE& 
      sn=1234& 
      status=SUCCESSFUL& 
@@ -188,7 +188,7 @@ Common steps:
     * **keyword**, trigger keyword
     * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
     * **price**, partner earning amount (not included if payment is separate)
-    * **renewal_period**, period of time for renew the premium subscription service (in seconds)
+    * **payment_schedule**, period of time for renew the premium subscription service (EVERYDAY, EVERYWEEK, WORKDAYS or other string value)
     * **service**, premium service identifier
     * **sn**, mobile service number
     * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
@@ -210,7 +210,7 @@ Common steps:
      id=12345678901234567890& 
      keyword=TRIGGER& 
      price=0.1& 
-     renewal_period=86400& 
+     payment_schedule=EVERYDAY& 
      service=MYSERVICE& 
      sn=1234& 
      status=SUCCESSFUL&
