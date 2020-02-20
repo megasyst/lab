@@ -24,4 +24,13 @@ HTTP notifications available:
 
 IMPORTANT
 
-For Country code(provided as two-letter code defined in ISO 3166-1) and Mobile network operator's brand refer to: https://en.wikipedia.org/wiki/Mobile_country_code
+For Country code(provided as two-letter code defined in ISO 3166-1).
+
+Carrier identifiers
+-------------------
+
+**Morocco**
+
+  * **60402** INWI
+  * **60400** Orange
+
