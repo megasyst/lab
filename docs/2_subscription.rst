@@ -1,3 +1,5 @@
+.. _mobile network: https://megasyst.readthedocs.io/en/latest/1_common.html#carrier-identifiers
+
 =====================
 Mobile Subscriptions
 =====================
@@ -17,7 +19,7 @@ Common steps:
   3. User accepts subscription service terms and conditions by clicking confirmation button;
   4. Megasyst's platform redirects user to the callback URL of the service with ANY_PREMIUM_SERVICE_CUSTOM_PARAMS and result parameters:
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile network
+    * **carrier**, `mobile network`_
     * **country**, country
     * **event** = **SUBSCRIPTION**
     * **flow** = **CLICK**
@@ -43,7 +45,7 @@ Common steps:
   5. Megasyst notificates merchant by HTTP with following parameters:
   
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile network
+    * **carrier**, `mobile network`_
     * **country**, country
     * **currency**, partner earning currency (not included if payment is separate)
     * **data**, order request data
@@ -97,7 +99,7 @@ Common steps:
   4. User inputs its code from SMS in a web form and click a button to confirm the subscription process;
   5. Megasyst's platform redirects user to the callback URL of the service with ANY_PREMIUM_SERVICE_CUSTOM_PARAMS and result parameters:
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile network
+    * **carrier**, `mobile network`_
     * **country**, country
     * **event** = **SUBSCRIPTION**
     * **flow** = **PIN**
@@ -123,7 +125,7 @@ Common steps:
   6. Megasyst notificates merchant by HTTP with following parameters:
   
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile network
+    * **carrier**, `mobile network`_
     * **country**, country
     * **currency**, partner earning currency (not included if payment is separate)
     * **data**, order request data
@@ -177,7 +179,7 @@ Common steps:
   3. Megasyst notificates merchant by HTTP with following parameters:
 
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile network
+    * **carrier**, `mobile network`_
     * **country**, country
     * **currency**, partner earning currency (not included if payment is separate)
     * **data**, SMS body
@@ -228,7 +230,7 @@ Renewal of subscription
 Megasyst notificates merchants by HTTP with following parameters:
 
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile network
+    * **carrier**, `mobile network`_
     * **country**, country
     * **currency**, partner earning currency
     * **data**, SMS body or other data
@@ -275,7 +277,7 @@ User may stop/deactivate active subscription at any time.
 Megasyst notificates partners by HTTP with next parameters:
 
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, mobile network
+    * **carrier**, `mobile network`_
     * **country**, country
     * **data**, SMS body
     * **event** = **UNSUBSCRIPTION**
