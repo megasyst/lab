@@ -19,7 +19,7 @@ The platform notificates partners by HTTP with next parameters:
   * **price**, partner earning amount (not included for billing by MT SMS)
   * **service**, premium service identifier
   * **sn**, mobile service number
-  * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
+  * **status** = **SUCCESSFUL** (if funds should be deducted but not deducted then **FAILED** or **WAITING**)
   * **subscriber**, end user identifier or MSISDN
   * **subscriber_currency**: end user currency (not included for billing by MT SMS)
   * **subscriber_price**: end user price (not included for billing by MT SMS)
@@ -63,7 +63,7 @@ The platform notificates partners by HTTP with next parameters:
   * **price**, partner earning amount
   * **service**, premium service identifier
   * **sn**, mobile service number
-  * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
+  * **status** = **FAILED** or **SUCCESSFUL** or **WAITING** (based on MT SMS delivery status)
   * **subscriber**, end user identifier or MSISDN
   * **subscriber_currency**: end user currency
   * **subscriber_price**: end user price
