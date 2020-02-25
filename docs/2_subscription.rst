@@ -59,7 +59,7 @@ Common steps:
     * **payment_schedule**, period of time for renew the premium subscription service (EVERYDAY, EVERYWEEK, WORKDAYS or other string value)
     * **service**, premium service identifier
     * **sn**, mobile service number
-    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
+    * **status** = **SUCCESSFUL** (other values indicate the inability to subscribe for some reason)
     * **subscriber**, end user identifier or MSISDN
     * **subscriber_currency**: end user currency (not included if payment is separate)
     * **subscriber_price**: end user price (not included if payment is separate)
@@ -139,7 +139,7 @@ Common steps:
     * **payment_schedule**, period of time for renew the premium subscription service (EVERYDAY, EVERYWEEK, WORKDAYS or other string value)
     * **service**, premium service identifier
     * **sn**, mobile service number
-    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
+    * **status** = **SUCCESSFUL** (other values indicate the inability to subscribe for some reason)
     * **subscriber**, end user identifier or MSISDN
     * **subscriber_currency**: end user currency (not included if payment is separate)
     * **subscriber_price**: end user price (not included if payment is separate)
@@ -193,7 +193,7 @@ Common steps:
     * **payment_schedule**, period of time for renew the premium subscription service (EVERYDAY, EVERYWEEK, WORKDAYS or other string value)
     * **service**, premium service identifier
     * **sn**, mobile service number
-    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
+    * **status** = **SUCCESSFUL** (other values indicate the inability to subscribe for some reason)
     * **subscriber**, end user identifier or MSISDN
     * **subscriber_currency**: end user currency (not included if payment is separate)
     * **subscriber_price**: end user price (not included if payment is separate)
@@ -242,7 +242,7 @@ Megasyst notificates merchants by HTTP with following parameters:
     * **price**, partner earning amount
     * **service**, premium service identifier
     * **sn**, mobile service number
-    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
+    * **status** = **SUCCESSFUL** (if funds are not deducted then FAILED or WAITING)
     * **subscriber**, end user identifier or MSISDN
     * **subscriber_currency**: end user currency
     * **subscriber_price**: end user price
@@ -286,7 +286,7 @@ Megasyst notificates partners by HTTP with next parameters:
     * **keyword**, trigger keyword
     * **service**, premium service identifier
     * **sn**, mobile service number
-    * **status** = **FAILED** or **SUCCESSFUL** or **WAITING**
+    * **status** = **SUCCESSFUL** (other values indicate the inability to stop subscription for some reason)
     * **subscriber**, end user identifier or MSISDN
     * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
  
