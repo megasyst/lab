@@ -60,6 +60,7 @@ The platform notificates partners by HTTP with next parameters:
   * **flow** = **SMS**
   * **id**, event identifier
   * **keyword**, trigger keyword
+  * **order**, id of OTP order
   * **price**, partner earning amount
   * **service**, premium service identifier
   * **sn**, mobile service number
