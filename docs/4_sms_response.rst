@@ -10,9 +10,9 @@ Every MT SMS should be send via HTTP API by request with authorization token in 
 Request format:
   1. URL part
     - **POST /mailings**
-  1. Header part
+  2. Header part
     - **Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
-  2. Body part (parameters in WWW serialization format)
+  3. Body part (parameters in WWW serialization format)
     - **body**, text of MT SMS
     - **service**, premium service identifier
     - **subscriber**, end user identifier or MSISDN
