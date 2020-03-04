@@ -307,3 +307,29 @@ Megasyst notificates partners by HTTP with next parameters:
      time=2020-01-01+01%3A01%3A01+UTC
 
 User receives confirmation SMS about unsubscription.
+
+Deactivation via API request
+----------------------------
+
+Some connections allow you to deactivate subscriptions using the HTTP API request.
+Please consult the availability of this option with your manager!
+
+Every deactivation request should be send via HTTP API by request with authorization token in the header to **api2.megasyst.com**.
+
+Request format:
+  1. URL part
+    - **DELETE /subscriptions/{SERVICE}/{SUBSCRIBER}**
+  2. Header part
+    - **Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
+
+**SERVICE** - the subscription service identifier
+
+**SUBSCRIBER** - numeric phone number or another identifier of subscriber.
+
+Response format:
+  1. Header part
+    - **HTTP 200**
+  2. Body part is JSON object of
+    - **status** = **SUCCESSFUL** or **FAILED**
+    
+
