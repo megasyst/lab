@@ -328,8 +328,9 @@ Request format:
 
 Response format:
   1. Header part
-    - **HTTP 200**
+    - **HTTP 200** (or other values in case of errors)
   2. Body part is JSON object of
     - **status** = **SUCCESSFUL** or **FAILED**
+    - **error**, error message if exists
     
 
