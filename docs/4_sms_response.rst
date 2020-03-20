@@ -18,8 +18,13 @@ Request format:
     - **subscriber**, end user identifier or MSISDN
 
 Response format:
-  1. Header part
-    - **HTTP 200**
+  1. HTTP response code
+    - **200**, if request is processable
+    - **403**, if service not found
+    - **410**, if subscriber's SMS not found
+    - **422**, if request has wrong parameters set
+    - **429**, if subscriber was already informed
   2. Body part is JSON object of
     - **status** = **SUCCESSFUL** or **FAILED**
+    - **error**, error message (optional)
     
