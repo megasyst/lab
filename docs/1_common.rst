@@ -9,7 +9,7 @@ Megasyst Aggregation Platform(MAP) offers any merchant(service-provider) to prov
 The MAP provides following communication channels:
   * HTTP notifications to merchant servers,
   * HTTP REST API for management and analytics,
-  * HTTP redirection API for redirecting mobile users via click(wap) or PIN(WiFi) flows,
+  * HTTP redirection API for redirecting mobile users via Click(WAP) or PIN-submit(WiFi) flows,
   * E-mail notifications.
 
 HTTP notifications to merchant servers
@@ -116,10 +116,8 @@ ______
 Carrier           ID
 ================  ==========
 Bite              24705
-IZZI              24708
 LMT               24701
 Tele2             24702
-Triatel           24703
 ================  ==========
 
 Lithuania
