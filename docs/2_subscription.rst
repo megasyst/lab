@@ -284,6 +284,7 @@ Megasyst notificates partners by HTTP with next parameters:
     * **flow** = **SMS**
     * **id**, event identifier
     * **keyword**, trigger keyword
+    * **previous_order**, previous order identifier (if it's found)
     * **service**, premium service identifier
     * **sn**, mobile service number
     * **status** = **SUCCESSFUL** (other values indicate the inability to stop subscription for some reason)
@@ -298,8 +299,9 @@ Megasyst notificates partners by HTTP with next parameters:
      data=trigger+123& 
      event=UNSUBSCRIPTION& 
      flow=SMS& 
-     id=12345678901234567890& 
+     id=12345678901234567892& 
      keyword=TRIGGER& 
+     previous_order=12345678901234567890& 
      service=MYSERVICE& 
      sn=1234& 
      status=SUCCESSFUL& 
