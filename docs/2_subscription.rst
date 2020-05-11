@@ -9,15 +9,17 @@ We divide subscription's activation process on 3 flows:
   2. PIN flow, also known as PIN-submit or WEB flow or App flow;
   3. SMS flow, also known as SMS MO flow, SMS MT flow , SMS flow or App flow;
 
+You can use URL with **.html** or **.json** suffix.
 
 Starting subscription on Click flow
 -----------------------------------------
 
 Common steps:
   1. User wants to subscribe the premium service on merchant's landing page;
-  2. User redirects to http://pay.megasyst.com/start/{KEYWORD}?{ANY_PREMIUM_SERVICE_CUSTOM_PARAMS};
+  2. User redirects to http://{BASE_URL}/start/{KEYWORD}?{YOUR_CUSTOM_PARAMS};
   3. User accepts subscription service terms and conditions by clicking confirmation button;
-  4. Megasyst's platform redirects user to the callback URL of the service with ANY_PREMIUM_SERVICE_CUSTOM_PARAMS and result parameters:
+  4. Megasyst's platform checks the confirmation parameters on http://{BASE_URL}/callback
+  5. Megasyst's platform redirects user to the callback URL of the service with YOUR_CUSTOM_PARAMS and result parameters:
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
     * **carrier**, `mobile network`_
     * **country**, country
@@ -48,7 +50,7 @@ Common steps:
     * **carrier**, `mobile network`_
     * **country**, country
     * **currency**, partner earning currency (not included if payment is separate)
-    * **data**, order request data
+    * **data**, order request data in format "{KEYWORD}?{YOUR_CUSTOM_PARAMS}"
     * **event** = **SUBSCRIPTION**
     * **flow** = **CLICK**
     * **free_period**, free time for using the premium service (in seconds)
@@ -71,7 +73,7 @@ Common steps:
      carrier=12345& 
      country=XX& 
      currency=XXX& 
-     data=keyword& 
+     data=KEYWORD?your=custom_param& 
      event=SUBSCRIPTION& 
      flow=CLICK& 
      free_period=86400& 
@@ -94,10 +96,11 @@ Starting subscription on PIN flow
 
 Common steps:
   1. User wants to subscribe the premium service on merchant's landing page or in app;
-  2. User redirects to http://pay.megasyst.com/start/{KEYWORD}?{ANY_PREMIUM_SERVICE_CUSTOM_PARAMS};
+  2. User redirects to http://{BASE_URL}/start/{KEYWORD}?{YOUR_CUSTOM_PARAMS};
   3. User inputs its MSISDN in a web form and click a button to send a confirmation code;
   4. User inputs its code from SMS in a web form and click a button to confirm the subscription process;
-  5. Megasyst's platform redirects user to the callback URL of the service with ANY_PREMIUM_SERVICE_CUSTOM_PARAMS and result parameters:
+  5. Megasyst's platform checks the confirmation code on http://{BASE_URL}/callback
+  6. Megasyst's platform redirects user to the callback URL of the service with YOUR_CUSTOM_PARAMS and result parameters:
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
     * **carrier**, `mobile network`_
     * **country**, country
@@ -128,7 +131,7 @@ Common steps:
     * **carrier**, `mobile network`_
     * **country**, country
     * **currency**, partner earning currency (not included if payment is separate)
-    * **data**, order request data
+    * **data**, order request data in format "{KEYWORD}?{YOUR_CUSTOM_PARAMS}"
     * **event** = **SUBSCRIPTION**
     * **flow** = **PIN**
     * **free_period**, free time for using the premium service (in seconds)
@@ -151,7 +154,7 @@ Common steps:
      carrier=12345& 
      country=XX& 
      currency=XXX& 
-     data=trigger& 
+     data=TRIGGER?your=custom_param_value& 
      event=SUBSCRIPTION& 
      flow=PIN& 
      free_period=86400& 
@@ -233,7 +236,7 @@ Megasyst notificates merchants by HTTP with following parameters:
     * **carrier**, `mobile network`_
     * **country**, country
     * **currency**, partner earning currency
-    * **data**, SMS body or other data
+    * **data**, same data from the subscription order
     * **event** = **RENEWAL**
     * **flow** = **CLICK** or **PIN** or **SMS** or **USSD**
     * **id**, event identifier
