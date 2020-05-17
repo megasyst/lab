@@ -26,6 +26,14 @@ IMPORTANT
 
 For Country code(provided as two-letter code defined in ISO 3166-1).
 
+Requests from merchant servers
+------------------------------
+
+Merchant can send requests to Megasyst's HTTP API with authorization token in the header.
+
+Header format is:
+  * Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 Carrier identifiers
 -------------------
 
