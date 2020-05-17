@@ -313,13 +313,35 @@ Megasyst notificates partners by HTTP with next parameters:
 
 User receives confirmation SMS about unsubscription.
 
+Subcriber status checking via API request
+-----------------------------------------
+
+Merchant can check a subscriber status via HTTP API by request with authorization token in the header.
+
+Request format:
+  1. URL part
+    - **GET /subscriptions/{SERVICE}/{SUBSCRIBER}**
+  2. Header part
+    - **Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
+
+**SERVICE** - the subscription service identifier
+
+**SUBSCRIBER** - numeric phone number or another identifier of subscriber.
+
+Response format:
+  1. Header part
+    - **HTTP 200** (or other values in case of errors)
+  2. Body part is JSON object of
+    - **status** = **SUBSCRIBED** or **UNSUBSCRIBED**
+    - **error**, error message if exists
+    
 Deactivation via API request
 ----------------------------
 
 Some connections allow you to deactivate subscriptions using the HTTP API request.
 Please consult the availability of this option with your manager!
 
-Every deactivation request should be send via HTTP API by request with authorization token in the header to **api2.megasyst.com**.
+Every deactivation request should be send via HTTP API by request with authorization token in the header.
 
 Request format:
   1. URL part
