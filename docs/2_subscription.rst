@@ -57,6 +57,7 @@ Common steps:
     * **id**, event identifier
     * **keyword**, trigger keyword
     * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
+    * **previous_order**, previous order identifier if it exists
     * **price**, partner earning amount (not included if payment is separate)
     * **payment_schedule**, period of time for renew the premium subscription service (EVERYDAY, EVERYWEEK, WORKDAYS or other string value)
     * **service**, premium service identifier
@@ -138,6 +139,7 @@ Common steps:
     * **id**, event identifier
     * **keyword**, trigger keyword
     * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
+    * **previous_order**, previous order identifier if it exists
     * **price**, partner earning amount (not included if payment is separate)
     * **payment_schedule**, period of time for renew the premium subscription service (EVERYDAY, EVERYWEEK, WORKDAYS or other string value)
     * **service**, premium service identifier
@@ -192,6 +194,7 @@ Common steps:
     * **id**, event identifier
     * **keyword**, trigger keyword
     * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
+    * **previous_order**, previous order identifier if it exists
     * **price**, partner earning amount (not included if payment is separate)
     * **payment_schedule**, period of time for renew the premium subscription service (EVERYDAY, EVERYWEEK, WORKDAYS or other string value)
     * **service**, premium service identifier
@@ -242,6 +245,7 @@ Megasyst notificates merchants by HTTP with following parameters:
     * **id**, event identifier
     * **keyword**, trigger keyword
     * **order**, id of subscription order
+    * **previous_order**, previous order identifier if it exists
     * **price**, partner earning amount
     * **service**, premium service identifier
     * **sn**, mobile service number
@@ -275,7 +279,7 @@ Megasyst notificates merchants by HTTP with following parameters:
 In case of subscription renewal, user could be notified with SMS, however it depends on the exact carrier(s) subscription rules.
 
 Deactivation of subscription
-------------------------
+----------------------------
 User may stop/deactivate active subscription at any time.
 Megasyst notificates partners by HTTP with next parameters:
 
@@ -287,7 +291,7 @@ Megasyst notificates partners by HTTP with next parameters:
     * **flow** = **SMS**
     * **id**, event identifier
     * **keyword**, trigger keyword
-    * **previous_order**, previous order identifier (if it's found)
+    * **previous_order**, previous order identifier if it exists
     * **service**, premium service identifier
     * **sn**, mobile service number
     * **status** = **SUCCESSFUL** (other values indicate the inability to stop subscription for some reason)
