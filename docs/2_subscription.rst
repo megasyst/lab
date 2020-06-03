@@ -286,12 +286,13 @@ Megasyst notificates partners by HTTP with next parameters:
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
     * **carrier**, `mobile network`_
     * **country**, country
-    * **data**, SMS body
+    * **data**, SMS body or URL with parameters
     * **event** = **UNSUBSCRIPTION**
     * **flow** = **SMS**
     * **id**, event identifier
     * **keyword**, trigger keyword
     * **previous_order**, previous order identifier if it exists
+    * **previous_order_data**, SMS body or URL with parameters if it exists
     * **service**, premium service identifier
     * **sn**, mobile service number
     * **status** = **SUCCESSFUL** (other values indicate the inability to stop subscription for some reason)
