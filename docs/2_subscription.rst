@@ -55,6 +55,7 @@ Common steps:
     * **flow** = **CLICK**
     * **free_period**, free time for using the premium service (in seconds)
     * **id**, event identifier
+    * **ip**, end user IP address
     * **keyword**, trigger keyword
     * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
     * **previous_order**, previous order identifier if it exists
@@ -67,6 +68,7 @@ Common steps:
     * **subscriber_currency**: end user currency (not included if payment is separate)
     * **subscriber_price**: end user price (not included if payment is separate)
     * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
+    * **user_agent**, end user browser agent
  
   Example::
  
@@ -79,6 +81,7 @@ Common steps:
      flow=CLICK& 
      free_period=86400& 
      id=12345678901234567890& 
+     ip=1.2.3.4& 
      keyword=KEYWORD& 
      price=0.1& 
      payment_schedule=EVERYDAY& 
@@ -89,7 +92,8 @@ Common steps:
      subscriber_currency=XXX& 
      subscriber_price=0.1& 
      time=2020-01-01+01%3A01%3A01+UTC
-
+     user_agent=Mozilla/5.0+(Macintosh;+Intel+Mac+OS+X+10_15_5)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)
+     
   6. User receives confirmation SMS with subscription service information.
 
 Starting subscription on PIN flow
@@ -137,6 +141,7 @@ Common steps:
     * **flow** = **PIN**
     * **free_period**, free time for using the premium service (in seconds)
     * **id**, event identifier
+    * **ip**, end user IP address
     * **keyword**, trigger keyword
     * **need_mt_sms** = **1** (if this order needs additional MT SMS from partner)
     * **previous_order**, previous order identifier if it exists
@@ -149,7 +154,8 @@ Common steps:
     * **subscriber_currency**: end user currency (not included if payment is separate)
     * **subscriber_price**: end user price (not included if payment is separate)
     * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
- 
+    * **user_agent**, end user browser agent
+
   Example::
  
      ad_channel=SYSTEM& 
@@ -161,6 +167,7 @@ Common steps:
      flow=PIN& 
      free_period=86400& 
      id=12345678901234567890& 
+     ip=1.2.3.4& 
      keyword=TRIGGER& 
      price=0.1& 
      payment_schedule=EVERYDAY& 
@@ -171,7 +178,8 @@ Common steps:
      subscriber_currency=XXX& 
      subscriber_price=0.1& 
      time=2020-01-01+01%3A01%3A01+UTC
-     
+     user_agent=Mozilla/5.0+(Macintosh;+Intel+Mac+OS+X+10_15_5)+AppleWebKit/605.1.15+(KHTML,+like+Gecko)
+
   7. User receives confirmation SMS with subscription service information.
 
 
@@ -243,6 +251,7 @@ Megasyst notificates merchants by HTTP with following parameters:
     * **event** = **RENEWAL**
     * **flow** = **CLICK** or **PIN** or **SMS** or **USSD**
     * **id**, event identifier
+    * **ip**, end user IP address (if it's known)
     * **keyword**, trigger keyword
     * **order**, id of subscription order
     * **previous_order**, previous order identifier if it exists
@@ -254,6 +263,7 @@ Megasyst notificates merchants by HTTP with following parameters:
     * **subscriber_currency**: end user currency
     * **subscriber_price**: end user price
     * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
+    * **user_agent**, end user browser agent (if it's known)
  
   Example::
  
