@@ -265,26 +265,26 @@ Megasyst notificates merchants by HTTP with following parameters:
   * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
   * **user_agent**, end user browser agent (if it's known)
  
-  Example::
+Example::
  
-     ad_channel=SYSTEM& 
-     carrier=12345& 
-     country=XX& 
-     currency=XXX& 
-     data=trigger+123& 
-     event=RENEWAL& 
-     flow=MOSMS& 
-     id=12345678901234567891& 
-     keyword=TRIGGER& 
-     order=12345678901234567890& 
-     price=0.1& 
-     service=MYSERVICE& 
-     sn=1234& 
-     status=SUCCESSFUL& 
-     subscriber=12345678900& 
-     subscriber_currency=XXX& 
-     subscriber_price=0.1& 
-     time=2020-01-01+01%3A01%3A01+UTC
+   ad_channel=SYSTEM& 
+   carrier=12345& 
+   country=XX& 
+   currency=XXX& 
+   data=trigger+123& 
+   event=RENEWAL& 
+   flow=MOSMS& 
+   id=12345678901234567891& 
+   keyword=TRIGGER& 
+   order=12345678901234567890& 
+   price=0.1& 
+   service=MYSERVICE& 
+   sn=1234& 
+   status=SUCCESSFUL& 
+   subscriber=12345678900& 
+   subscriber_currency=XXX& 
+   subscriber_price=0.1& 
+   time=2020-01-01+01%3A01%3A01+UTC
 
 In case of subscription renewal, user could be notified with SMS, however it depends on the exact carrier(s) subscription rules.
 
@@ -309,22 +309,22 @@ Megasyst notificates partners by HTTP with next parameters:
   * **subscriber**, end user identifier or MSISDN
   * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
  
-  Example::
+Example::
  
-     ad_channel=SYSTEM& 
-     carrier=12345& 
-     country=XX& 
-     data=trigger+123& 
-     event=UNSUBSCRIPTION& 
-     flow=SMS& 
-     id=12345678901234567892& 
-     keyword=TRIGGER& 
-     previous_order=12345678901234567890& 
-     service=MYSERVICE& 
-     sn=1234& 
-     status=SUCCESSFUL& 
-     subscriber=12345678900& 
-     time=2020-01-01+01%3A01%3A01+UTC
+   ad_channel=SYSTEM& 
+   carrier=12345& 
+   country=XX& 
+   data=trigger+123& 
+   event=UNSUBSCRIPTION& 
+   flow=SMS& 
+   id=12345678901234567892& 
+   keyword=TRIGGER& 
+   previous_order=12345678901234567890& 
+   service=MYSERVICE& 
+   sn=1234& 
+   status=SUCCESSFUL& 
+   subscriber=12345678900& 
+   time=2020-01-01+01%3A01%3A01+UTC
 
 User receives confirmation SMS about unsubscription.
 
