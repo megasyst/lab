@@ -243,27 +243,27 @@ Renewal of subscription
 
 Megasyst notificates merchants by HTTP with following parameters:
 
-    * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, `mobile network`_
-    * **country**, country
-    * **currency**, partner earning currency
-    * **data**, same data from the subscription order
-    * **event** = **RENEWAL**
-    * **flow** = **CLICK** or **PIN** or **SMS** or **USSD**
-    * **id**, event identifier
-    * **ip**, end user IP address (if it's known)
-    * **keyword**, trigger keyword
-    * **order**, id of subscription order
-    * **previous_order**, previous order identifier if it exists
-    * **price**, partner earning amount
-    * **service**, premium service identifier
-    * **sn**, mobile service number
-    * **status** = **SUCCESSFUL** (if funds are not deducted then FAILED or WAITING)
-    * **subscriber**, end user identifier or MSISDN
-    * **subscriber_currency**: end user currency
-    * **subscriber_price**: end user price
-    * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
-    * **user_agent**, end user browser agent (if it's known)
+  * **ad_channel**, ad channel identifier (by default: SYSTEM)
+  * **carrier**, `mobile network`_
+  * **country**, country
+  * **currency**, partner earning currency
+  * **data**, same data from the subscription order
+  * **event** = **RENEWAL**
+  * **flow** = **CLICK** or **PIN** or **SMS** or **USSD**
+  * **id**, event identifier
+  * **ip**, end user IP address (if it's known)
+  * **keyword**, trigger keyword
+  * **order**, id of subscription order
+  * **previous_order**, previous order identifier if it exists
+  * **price**, partner earning amount
+  * **service**, premium service identifier
+  * **sn**, mobile service number
+  * **status** = **SUCCESSFUL** (if funds are not deducted then FAILED or WAITING)
+  * **subscriber**, end user identifier or MSISDN
+  * **subscriber_currency**: end user currency
+  * **subscriber_price**: end user price
+  * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
+  * **user_agent**, end user browser agent (if it's known)
  
   Example::
  
@@ -293,21 +293,21 @@ Deactivation of subscription
 User may stop/deactivate active subscription at any time.
 Megasyst notificates partners by HTTP with next parameters:
 
-    * **ad_channel**, ad channel identifier (by default: SYSTEM)
-    * **carrier**, `mobile network`_
-    * **country**, country
-    * **data**, SMS body or URL with parameters
-    * **event** = **UNSUBSCRIPTION**
-    * **flow** = **SMS**
-    * **id**, event identifier
-    * **keyword**, trigger keyword
-    * **previous_order**, previous order identifier if it exists
-    * **previous_order_data**, SMS body or URL with parameters if it exists
-    * **service**, premium service identifier
-    * **sn**, mobile service number
-    * **status** = **SUCCESSFUL** (other values indicate the inability to stop subscription for some reason)
-    * **subscriber**, end user identifier or MSISDN
-    * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
+  * **ad_channel**, ad channel identifier (by default: SYSTEM)
+  * **carrier**, `mobile network`_
+  * **country**, country
+  * **data**, SMS body or URL with parameters
+  * **event** = **UNSUBSCRIPTION**
+  * **flow** = **SMS**
+  * **id**, event identifier
+  * **keyword**, trigger keyword
+  * **previous_order**, previous order identifier if it exists
+  * **previous_order_data**, SMS body or URL with parameters if it exists
+  * **service**, premium service identifier
+  * **sn**, mobile service number
+  * **status** = **SUCCESSFUL** (other values indicate the inability to stop subscription for some reason)
+  * **subscriber**, end user identifier or MSISDN
+  * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
  
   Example::
  
