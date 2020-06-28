@@ -104,7 +104,7 @@ Common steps:
   2. User redirects to http://{BASE_URL}/start/{KEYWORD}?{YOUR_CUSTOM_PARAMS};
   3. User inputs its MSISDN and selects its network in a web form and click a button to send a confirmation code (this step can be skipped if YOUR_CUSTOM_PARAMS has **subscriber** and **carrier** parameters);
   4. User inputs its code from SMS in a web form and click a button to confirm the subscription process (this step can be skipped for JSON requests with **pin** parameter in YOUR_CUSTOM_PARAMS);
-  5. Megasyst's platform checks the confirmation code on http://{BASE_URL}/callback
+  5. Megasyst's platform checks the confirmation code on http://{BASE_URL}/callback (with **pin** parameter)
   6. Megasyst's platform redirects user to the callback URL of the service with YOUR_CUSTOM_PARAMS and result parameters (for JSON requests these data returns directly without redirect):
     * **ad_channel**, ad channel identifier (by default: SYSTEM)
     * **carrier**, `mobile network`_
