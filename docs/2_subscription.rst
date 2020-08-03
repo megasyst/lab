@@ -374,5 +374,8 @@ Response format:
   2. Body part is JSON object of
     - **status** = **SUCCESSFUL** or **FAILED**
     - **error**, error message if exists
-    
+
+For a quick test you can use CURL tool in next format:
+
+   curl -X DELETE -H "Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" "{BASE_URL}/subscriptions/{SERVICE}/{SUBSCRIBER}"
 
