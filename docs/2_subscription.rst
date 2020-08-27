@@ -343,11 +343,17 @@ Request format:
 
 **SUBSCRIBER** - numeric phone number or another identifier of subscriber.
 
+Optional GET parameters:
+
+**sn** - mobile service number
+
 Response format:
   1. Header part
     - **HTTP 200** (or other values in case of errors)
   2. Body part is JSON object of
     - **status** = **SUBSCRIBED** or **UNSUBSCRIBED**
+    - **order_time** - last order time (if subscribed)
+    - **payment_time** - last successful payment (if subscribed)
     - **error**, error message if exists
     
 Deactivation via API request
