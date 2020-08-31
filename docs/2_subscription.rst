@@ -30,7 +30,9 @@ Common steps:
     * **service**, premium service identifier
     * **status** = **SUCCESSFUL** or **ALREADY_SUBSCRIBED**, other values indicate the inability to subscribe for some reason
     * **subscriber**, end user identifier or MSISDN
-   
+
+**YOUR_CUSTOM_PARAMS** can contains any parameters that you wish to see in asynchronous notifications in **data** parameter, also it can contains custom **callback** or **callback_on_error** URLs.
+
   Example::
  
     ad_channel=SYSTEM& 
@@ -116,7 +118,9 @@ Common steps:
     * **service**, premium service identifier
     * **status** = **SUCCESSFUL** or **ALREADY_SUBSCRIBED**, other values indicate the inability to subscribe for some reason
     * **subscriber**, end user identifier or MSISDN
-   
+
+**YOUR_CUSTOM_PARAMS** can contains any parameters that you wish to see in asynchronous notifications in **data** parameter, also it can contains custom **callback** or **callback_on_error** URLs.
+
   Example::
  
     ad_channel=SYSTEM& 
