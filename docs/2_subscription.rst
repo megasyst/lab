@@ -251,6 +251,7 @@ Megasyst notificates merchants by HTTP with following parameters:
   * **carrier**, `mobile network`_
   * **country**, country
   * **currency**, partner earning currency
+  * **delay**, **DELAYED** (presents only if payment was postponed)
   * **data**, same data from the subscription order
   * **event** = **RENEWAL**
   * **flow** = **CLICK** or **PIN** or **SMS** or **USSD**
@@ -261,6 +262,7 @@ Megasyst notificates merchants by HTTP with following parameters:
   * **previous_order**, previous order identifier if it exists
   * **price**, partner earning amount
   * **service**, premium service identifier
+  * **share**, **FULL** or **PART** (presents only for successful payments)
   * **sn**, mobile service number
   * **status** = **SUCCESSFUL** (if funds are not deducted then FAILED or WAITING)
   * **subscriber**, end user identifier or MSISDN
