@@ -373,11 +373,10 @@ Every deactivation request should be send via HTTP API by request with authoriza
 Request format:
   1. URL part
     - **POST /stop/{SUBSCRIBER}**
+    **SUBSCRIBER** - numeric phone number or another identifier of subscriber.
   2. Request parameters must contain "**service**" (subscription service identifier) or "**sn**" (mobile service number) parameter
   3. Header part
     - **Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
-
-**SUBSCRIBER** - numeric phone number or another identifier of subscriber.
 
 Response format:
   1. Header part
