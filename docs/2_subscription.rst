@@ -374,7 +374,7 @@ Request format:
   1. URL part
     - **POST /stop/{SUBSCRIBER}**
   2. Request parameters must contain "**service**" (subscription service identifier) or "**sn**" (mobile service number) parameter
-  2. Header part
+  3. Header part
     - **Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 **SUBSCRIBER** - numeric phone number or another identifier of subscriber.
