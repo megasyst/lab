@@ -372,11 +372,10 @@ Every deactivation request should be send via HTTP API by request with authoriza
 
 Request format:
   1. URL part
-    - **DELETE /subscriptions/{SERVICE}/{SUBSCRIBER}**
+    - **POST /stop/{SUBSCRIBER}**
+  2. Request parameters must contain "**service**" (subscription service identifier) or "**sn**" (mobile service number) parameter
   2. Header part
     - **Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
-
-**SERVICE** - the subscription service identifier
 
 **SUBSCRIBER** - numeric phone number or another identifier of subscriber.
 
@@ -389,5 +388,5 @@ Response format:
 
 For a quick test you can use CURL tool in next format:
 
-   curl -X DELETE -H "Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" "{BASE_URL}/subscriptions/{SERVICE}/{SUBSCRIBER}"
+   curl -X POST -H "Authorization: Partner XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" "{BASE_URL}/stop/{SUBSCRIBER}?service={SERVICE}"
 
