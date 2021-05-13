@@ -29,6 +29,7 @@ Common steps:
     * **keyword**, trigger keyword
     * **service**, premium service identifier
     * **status** = **SUCCESSFUL** or **ALREADY_SUBSCRIBED**, other values indicate the inability to subscribe for some reason
+    * **status_code**, additional information about operation result (optional)
     * **subscriber**, end user identifier or MSISDN
 
 **YOUR_CUSTOM_PARAMS** can contains any parameters that you wish to see in asynchronous notifications in **data** parameter, also it can contains custom **callback** or **callback_on_error** URLs.
@@ -117,6 +118,7 @@ Common steps:
     * **keyword**, trigger keyword
     * **service**, premium service identifier
     * **status** = **SUCCESSFUL** or **ALREADY_SUBSCRIBED**, other values indicate the inability to subscribe for some reason
+    * **status_code**, additional information about operation result (optional)
     * **subscriber**, end user identifier or MSISDN
 
 **YOUR_CUSTOM_PARAMS** can contains any parameters that you wish to see in asynchronous notifications in **data** parameter, also it can contains custom **callback** or **callback_on_error** URLs.
