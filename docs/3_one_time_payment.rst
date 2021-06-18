@@ -69,26 +69,26 @@ Order via PIN validation method with JSON API
   * **subscriber_price**: end user price (not included for billing by MT SMS)
   * **time**, time string (YYYY-MM-DD HH:MM\:SS UTC)
 
-  Example::
+  Example ::
  
-  ad_channel=SYSTEM& 
-  carrier=12301& 
-  country=XX& 
-  currency=XXX& 
-  data=keyword123& 
-  event=OTP& 
-  flow=PIN& 
-  id=12345678901234567890& 
-  keyword=KEYWORD& 
-  need_mt_sms=1& 
-  price=0.1& 
-  service=MYSERVICE& 
-  sn=1234& 
-  status=SUCCESSFUL& 
-  subscriber=123456789012& 
-  subscriber_currency=XXX& 
-  subscriber_price=1.0& 
-  time=2020-01-01+01%3A01%3A01+UTC
+    ad_channel=SYSTEM& 
+    carrier=12301& 
+    country=XX& 
+    currency=XXX& 
+    data=keyword123& 
+    event=OTP& 
+    flow=PIN& 
+    id=12345678901234567890& 
+    keyword=KEYWORD& 
+    need_mt_sms=1& 
+    price=0.1& 
+    service=MYSERVICE& 
+    sn=1234& 
+    status=SUCCESSFUL& 
+    subscriber=123456789012& 
+    subscriber_currency=XXX& 
+    subscriber_price=1.0& 
+    time=2020-01-01+01%3A01%3A01+UTC
 
 Order via SMS, USSD
 -------------------------------
