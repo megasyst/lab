@@ -6,10 +6,14 @@ Order via PIN validation method with JSON API
 ---------------------------------------------
 
 1. Sending PIN to user
+
 1.1. API request: http://{BASE_URL}/otp/{KEYWORD}.json?subscriber={MSISDN}
+
     * **KEYWORD**, trigger keyword
     * **MSISDN**, end user identifier or MSISDN
-1.2. API response (JSON):
+    
+1.2. API response (JSON)
+
     * **ad_channel**, promo channel identifier if exists
     * **carrier**, mobile network (concatenated MCC and MNC)
     * **country**, country (2 uppercase letters)
@@ -21,12 +25,17 @@ Order via PIN validation method with JSON API
     * **status** = **PIN_WAITING**, other values indicate the inability to sending PIN for some reason
     * **status_code**, additional information about operation result (optional)
     * **subscriber**, end user identifier or MSISDN
+    
 2. Checking PIN and making payment
+
 2.1. API request: http://{BASE_URL}/otp/{KEYWORD}.json?subscriber={MSISDN}&pin={PIN}
+
     * **KEYWORD**, trigger keyword
     * **MSISDN**, end user identifier or MSISDN
     * **PIN**, PIN code from the SMS which was sent by phase 1
-2.2. API response (JSON): 
+    
+2.2. API response (JSON)
+
     * **ad_channel**, promo channel identifier if exists
     * **carrier**, mobile network (concatenated MCC and MNC)
     * **country**, country (2 uppercase letters)
@@ -38,6 +47,7 @@ Order via PIN validation method with JSON API
     * **status** = **SUCCESSFUL**, other values indicate the inability to subscribe for some reason
     * **status_code**, additional information about operation result (optional)
     * **subscriber**, end user identifier or MSISDN
+    
 3. Megasyst additionally notificates merchant by HTTP with following parameters
 
  * **ad_channel**, ad channel identifier (by default: SYSTEM)
