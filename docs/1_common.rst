@@ -13,7 +13,7 @@ The MAP provides following communication channels:
   * E-mail notifications.
 
 HTTP notifications to merchant servers
--------------------------------------
+--------------------------------------
 
 The MAP notifies merchant by configured HTTP method regarding every significant event(example: starting or stopping of subscription, complaint, withdrawals and etc.) and waits **HTTP 200** status in the response.
 
@@ -218,7 +218,7 @@ Lithuania   LT             Telia             24601
 ==========  =============  ================  ==========
 
 🇱🇺 Luxembourg
-____________
+_____________
 
 ==========  =============  ================  ==========
 Country     Country ID     Carrier           Carrier ID
