@@ -279,8 +279,8 @@ _________
 Country     Country ID     Carrier           Carrier ID
 ==========  =============  ================  ==========
 Russia      RU             Beeline           25099
-Russia      RU             MTS               25001
 Russia      RU             Megafon           25002
+Russia      RU             MTS               25001
 Russia      RU             Tele2             25020
 ==========  =============  ================  ==========
 
