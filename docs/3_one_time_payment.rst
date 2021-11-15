@@ -28,7 +28,7 @@ Order via PIN validation method with JSON API
     
 2. Checking PIN and making payment
 
-2.1. API request: http://{BASE_URL}/otp/{KEYWORD}.json?subscriber={MSISDN}&pin={PIN}
+2.1. API request: http://{BASE_URL}/otp/callback/{KEYWORD}.json?subscriber={MSISDN}&pin={PIN}
 
   * **KEYWORD**, trigger keyword
   * **MSISDN**, end user identifier or MSISDN
