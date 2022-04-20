@@ -91,6 +91,17 @@ Belarus     BY             Life              25704
 Belarus     BY             MTS               25702
 ==========  =============  ================  ==========
 
+🇧🇬 Bulgaria
+__________
+
+==========  =============  ================  ==========
+Country     Country ID     Carrier           Carrier ID
+==========  =============  ================  ==========
+Bulgaria    BG             A1                28401
+Bulgaria    BG             Vivacom           28403
+Bulgaria    BG             Yettel (Telenor)  28405
+==========  =============  ================  ==========
+
 🇨🇿 Czech Republic
 _________________
 
@@ -98,6 +109,8 @@ _________________
 Country         Country ID     Carrier           Carrier ID
 ==============  =============  ================  ==========
 Czech Republic  CZ             O2                23002
+Czech Republic  CZ             TMobile           23001
+Czech Republic  CZ             Vodafone          23003
 ==============  =============  ================  ==========
 
 🇪🇬 Egypt
@@ -295,6 +308,17 @@ Serbia      RS             MTS               22003
 Serbia      RS             Telenor           22001
 Serbia      RS             VIP               22005
 ==========  =============  ================  ==========
+
+🇨🇭 Switzerland
+_________
+
+============  =============  ================  ==========
+Country       Country ID     Carrier           Carrier ID
+============  =============  ================  ==========
+Switzerland   CH             Salt              22803
+Switzerland   CH             Sunrise           22802
+Switzerland   CH             Swisscom          22801
+============  =============  ================  ==========
 
 🇹🇯 Tajikistan
 _____________
