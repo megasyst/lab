@@ -344,3 +344,17 @@ Ukraine     UA             Lifecell          25506
 Ukraine     UA             Vodafone          25501
 ==========  =============  ================  ==========
 
+🇬🇧 United Kingdom (Great Britain)
+_________________________________
+
+===============  =============  ================  ==========
+Country          Country ID     Carrier           Carrier ID
+===============  =============  ================  ==========
+United Kingdom   GB             O2                23410
+United Kingdom   GB             Vodafone          23415
+United Kingdom   GB             Three             23420
+United Kingdom   GB             TMobile           23430
+United Kingdom   GB             Orange            23433
+United Kingdom   GB             Virgin            23438
+United Kingdom   GB             Sky               23457
+
